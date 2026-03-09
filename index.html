@@ -168,6 +168,11 @@ header h1 {
   background: rgba(8,8,18,0.6);
   position: relative;
   z-index: 1;
+  overflow-x: auto;
+  scrollbar-width: none; /* Firefox */
+}
+.tabs::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
 }
 
 .tab {
@@ -182,6 +187,7 @@ header h1 {
   position: relative;
   bottom: -1px;
   font-family: 'DM Sans', sans-serif;
+  white-space: nowrap;
 }
 
 .tab:hover { color: #64748b; }
@@ -1109,20 +1115,47 @@ mark {
 }
 
 @media (max-width: 640px) {
-  header { flex-wrap: wrap; gap: 10px; padding: 14px 16px; }
-  header h1 { font-size: 1rem; }
-  .search-bar { width: 100%; order: 3; }
-  .tabs { padding: 0 16px; overflow-x: auto; }
+  header { flex-wrap: wrap; gap: 10px; padding: 12px 16px; }
+  header h1 { font-size: 1.15rem; }
+  .header-meta { font-size: 0.65rem; white-space: normal; text-align: left; line-height: 1.3; }
+  .search-bar { width: 100%; order: 3; margin-top: 4px; border-radius: 12px; }
+  
+  .progress-section { padding: 12px 16px; gap: 8px; }
+  .progress-bar-wrap { min-width: 80px; }
+  
+  .tabs { padding: 0 16px; }
+  .tab { padding: 14px 16px; }
+  
   .main { padding: 20px 16px 40px; }
-  .fc-hero { flex-direction: column; padding: 24px 20px; }
-  .fc-hero-actions { flex-direction: row; width: 100%; }
-  .fc-hero-btn { flex: 1; }
-  .quiz-options { grid-template-columns: 1fr; }
-  .modal { padding: 24px; }
+  
+  .fc-hero { flex-direction: column; padding: 24px 20px; align-items: center; text-align: center; gap: 20px; }
+  .fc-hero-stats { justify-content: center; margin-top: 5px; gap: 16px; }
+  .fc-hero-actions { flex-direction: column; width: 100%; }
+  .fc-hero-btn { width: 100%; justify-content: center; }
+  
+  .toolbar { margin-bottom: 20px; }
+  
+  .cards-grid { grid-template-columns: 1fr; gap: 12px; }
+  
+  .quiz-box { padding: 24px 20px; border-radius: 18px; }
+  .quiz-options { grid-template-columns: 1fr; gap: 8px; }
+  .quiz-option { padding: 14px 16px; font-size: 0.85rem; }
+  .quiz-question { font-size: 1.15rem; margin-bottom: 20px; }
+  
+  .modal { padding: 24px 20px; border-radius: 18px; }
   .modal-term { font-size: 1.3rem; }
-  .fc-scene { height: min(260px, 45vh); }
+  .modal-def { font-size: 0.85rem; margin-bottom: 20px; }
+  
+  .fc-scene { height: min(280px, 50vh); width: 100%; margin-bottom: 16px; }
+  .fc-face { padding: 20px; }
+  .fc-term { font-size: 1.3rem; }
+  .fc-def { font-size: 0.85rem; }
   .fc-actions { gap: 6px; }
-  .fc-btn { min-width: 72px; font-size: 0.75rem; padding: 10px 8px; }
+  .fc-btn { min-width: 0; font-size: 0.72rem; padding: 10px 4px; border-radius: 9px; }
+  
+  .fc-filter-row { gap: 6px; row-gap: 8px; }
+  .fc-filter-chip { padding: 6px 12px; font-size: 0.7rem; }
+  .fc-header { padding: 12px 16px; }
 }
 </style>
 </head>
