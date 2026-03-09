@@ -149,6 +149,8 @@
   .tab-droit.active { color: #67e8f9; }
   .tab-eco { color: #86efac; }
   .tab-eco.active { color: #86efac; }
+  .tab-mgmt { color: #f97316; }
+  .tab-mgmt.active { color: #f97316; }
 
   /* MAIN CONTENT */
   .main {
@@ -941,7 +943,7 @@
     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#64748b" stroke-width="2.5"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
     <input type="text" id="searchInput" placeholder="Rechercher une definition...">
   </div>
-  <div class="header-meta">46 definitions &bull; Droit &amp; Economie</div>
+  <div class="header-meta">176 definitions &bull; Droit, Economie &amp; Management</div>
 </header>
 
 <div class="progress-section">
@@ -949,14 +951,15 @@
   <div class="progress-bar-wrap">
     <div class="progress-bar-fill" id="progressFill"></div>
   </div>
-  <span class="progress-count" id="progressCount">0 / 46</span>
+  <span class="progress-count" id="progressCount">0 / 176</span>
   <button class="btn-reset" onclick="resetProgress()">Reinitialiser</button>
 </div>
 
 <div class="tabs">
   <div class="tab active" data-tab="all">Tout voir</div>
   <div class="tab tab-droit" data-tab="droit">Droit</div>
-  <div class="tab tab-eco" data-tab="eco">Economie &amp; Management</div>
+  <div class="tab tab-eco" data-tab="eco">Economie</div>
+  <div class="tab tab-mgmt" data-tab="mgmt">Management</div>
 </div>
 
 <div class="main">
@@ -983,89 +986,136 @@
 
   <div id="mainContent">
 
-  <!-- DROIT SECTION -->
-  <div class="section-group cat-droit-contrat" id="group-droit-contrat">
+  <div class="section-group" id="group-droit-c1">
     <div class="section-header">
-      <div class="section-icon" style="background: rgba(96,165,250,0.15); color: #60a5fa;">⚖️</div>
+      <div class="section-icon" style="background:rgba(96,165,250,0.15);color:#60a5fa;">⚖️</div>
       <div>
-        <div class="section-title" style="color: #60a5fa;">Formation &amp; Execution du Contrat</div>
-        <div class="section-sub">Droit Fiches 1 &amp; 2</div>
+        <div class="section-title" style="color:#60a5fa;">Definitions, sources, hierarchie et juridictions</div>
+        <div class="section-sub">Droit Cours 1</div>
       </div>
-      <span class="section-badge" style="background: rgba(96,165,250,0.1); color: #60a5fa;">18 def.</span>
+      <span class="section-badge" style="background:rgba(96,165,250,0.1);color:#60a5fa;">14 def.</span>
     </div>
-    <div class="cards-grid" id="grid-droit-contrat"></div>
+    <div class="cards-grid" id="grid-droit-c1"></div>
   </div>
 
-  <div class="section-group cat-droit-concurrence" id="group-droit-concurrence">
+  <div class="section-group" id="group-droit-c2">
     <div class="section-header">
-      <div class="section-icon" style="background: rgba(244,114,182,0.15); color: #f472b6;">🏛️</div>
+      <div class="section-icon" style="background:rgba(129,140,248,0.15);color:#818cf8;">📝</div>
       <div>
-        <div class="section-title" style="color: #f472b6;">Regulation, Concurrence &amp; Propriete</div>
-        <div class="section-sub">Droit Fiches 3 &amp; 4</div>
+        <div class="section-title" style="color:#818cf8;">Les contrats et les partenaires</div>
+        <div class="section-sub">Droit Cours 2</div>
       </div>
-      <span class="section-badge" style="background: rgba(244,114,182,0.1); color: #f472b6;">4 def.</span>
+      <span class="section-badge" style="background:rgba(129,140,248,0.1);color:#818cf8;">16 def.</span>
     </div>
-    <div class="cards-grid" id="grid-droit-concurrence"></div>
+    <div class="cards-grid" id="grid-droit-c2"></div>
   </div>
 
-  <div class="section-group cat-droit-structure" id="group-droit-structure">
+  <div class="section-group" id="group-droit-c3">
     <div class="section-header">
-      <div class="section-icon" style="background: rgba(251,146,60,0.15); color: #fb923c;">🏢</div>
+      <div class="section-icon" style="background:rgba(167,139,250,0.15);color:#a78bfa;">🔗</div>
       <div>
-        <div class="section-title" style="color: #fb923c;">Structures Juridiques</div>
-        <div class="section-sub">Droit Fiche 5</div>
+        <div class="section-title" style="color:#a78bfa;">Effets et inexecution du contrat</div>
+        <div class="section-sub">Droit Cours 3</div>
       </div>
-      <span class="section-badge" style="background: rgba(251,146,60,0.1); color: #fb923c;">6 def.</span>
+      <span class="section-badge" style="background:rgba(167,139,250,0.1);color:#a78bfa;">36 def.</span>
     </div>
-    <div class="cards-grid" id="grid-droit-structure"></div>
+    <div class="cards-grid" id="grid-droit-c3"></div>
   </div>
 
-  <div class="section-group cat-eco-marche" id="group-eco-marche">
+  <div class="section-group" id="group-droit-c4">
     <div class="section-header">
-      <div class="section-icon" style="background: rgba(52,211,153,0.15); color: #34d399;">📈</div>
+      <div class="section-icon" style="background:rgba(244,114,182,0.15);color:#f472b6;">🏛️</div>
       <div>
-        <div class="section-title" style="color: #34d399;">Le Marche &amp; l'Entreprise</div>
-        <div class="section-sub">Economie Fiches 1 &amp; 2</div>
+        <div class="section-title" style="color:#f472b6;">Droit de la Concurrence</div>
+        <div class="section-sub">Droit Cours 4</div>
       </div>
-      <span class="section-badge" style="background: rgba(52,211,153,0.1); color: #34d399;">7 def.</span>
+      <span class="section-badge" style="background:rgba(244,114,182,0.1);color:#f472b6;">14 def.</span>
     </div>
-    <div class="cards-grid" id="grid-eco-marche"></div>
+    <div class="cards-grid" id="grid-droit-c4"></div>
   </div>
 
-  <div class="section-group cat-eco-etat" id="group-eco-etat">
+  <div class="section-group" id="group-droit-c5">
     <div class="section-header">
-      <div class="section-icon" style="background: rgba(251,191,36,0.15); color: #fbbf24;">🏦</div>
+      <div class="section-icon" style="background:rgba(251,146,60,0.15);color:#fb923c;">💡</div>
       <div>
-        <div class="section-title" style="color: #fbbf24;">Etat &amp; Politiques Economiques</div>
-        <div class="section-sub">Economie Fiche 3</div>
+        <div class="section-title" style="color:#fb923c;">Propriete intellectuelle</div>
+        <div class="section-sub">Droit Cours 5</div>
       </div>
-      <span class="section-badge" style="background: rgba(251,191,36,0.1); color: #fbbf24;">5 def.</span>
+      <span class="section-badge" style="background:rgba(251,146,60,0.1);color:#fb923c;">2 def.</span>
     </div>
-    <div class="cards-grid" id="grid-eco-etat"></div>
+    <div class="cards-grid" id="grid-droit-c5"></div>
   </div>
 
-  <div class="section-group cat-eco-env" id="group-eco-env">
+  <div class="section-group" id="group-droit-c6">
     <div class="section-header">
-      <div class="section-icon" style="background: rgba(167,139,250,0.15); color: #a78bfa;">🌱</div>
+      <div class="section-icon" style="background:rgba(251,191,36,0.15);color:#fbbf24;">🏢</div>
       <div>
-        <div class="section-title" style="color: #a78bfa;">Environnement &amp; Innovation</div>
-        <div class="section-sub">Economie Fiche 4</div>
+        <div class="section-title" style="color:#fbbf24;">Les societes</div>
+        <div class="section-sub">Droit Cours 6</div>
       </div>
-      <span class="section-badge" style="background: rgba(167,139,250,0.1); color: #a78bfa;">2 def.</span>
+      <span class="section-badge" style="background:rgba(251,191,36,0.1);color:#fbbf24;">10 def.</span>
     </div>
-    <div class="cards-grid" id="grid-eco-env"></div>
+    <div class="cards-grid" id="grid-droit-c6"></div>
   </div>
 
-  <div class="section-group cat-eco-prod" id="group-eco-prod">
+  <div class="section-group" id="group-eco-c1">
     <div class="section-header">
-      <div class="section-icon" style="background: rgba(103,232,249,0.15); color: #67e8f9;">⚙️</div>
+      <div class="section-icon" style="background:rgba(52,211,153,0.15);color:#34d399;">📈</div>
       <div>
-        <div class="section-title" style="color: #67e8f9;">Production &amp; Facteurs</div>
-        <div class="section-sub">Economie Fiche 5</div>
+        <div class="section-title" style="color:#34d399;">Le marche et les Agents economiques</div>
+        <div class="section-sub">Economie Cours 1</div>
       </div>
-      <span class="section-badge" style="background: rgba(103,232,249,0.1); color: #67e8f9;">5 def.</span>
+      <span class="section-badge" style="background:rgba(52,211,153,0.1);color:#34d399;">26 def.</span>
     </div>
-    <div class="cards-grid" id="grid-eco-prod"></div>
+    <div class="cards-grid" id="grid-eco-c1"></div>
+  </div>
+
+  <div class="section-group" id="group-eco-c2">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(103,232,249,0.15);color:#67e8f9;">🏦</div>
+      <div>
+        <div class="section-title" style="color:#67e8f9;">Le role de l'Etat dans l'economie</div>
+        <div class="section-sub">Economie Cours 2</div>
+      </div>
+      <span class="section-badge" style="background:rgba(103,232,249,0.1);color:#67e8f9;">13 def.</span>
+    </div>
+    <div class="cards-grid" id="grid-eco-c2"></div>
+  </div>
+
+  <div class="section-group" id="group-eco-c3">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(134,239,172,0.15);color:#86efac;">⚙️</div>
+      <div>
+        <div class="section-title" style="color:#86efac;">Les facteurs de production</div>
+        <div class="section-sub">Economie Cours 3</div>
+      </div>
+      <span class="section-badge" style="background:rgba(134,239,172,0.1);color:#86efac;">28 def.</span>
+    </div>
+    <div class="cards-grid" id="grid-eco-c3"></div>
+  </div>
+
+  <div class="section-group" id="group-mgmt-c1">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(249,115,22,0.15);color:#f97316;">🎯</div>
+      <div>
+        <div class="section-title" style="color:#f97316;">L'entreprise et ses parties prenantes</div>
+        <div class="section-sub">Management Cours 1</div>
+      </div>
+      <span class="section-badge" style="background:rgba(249,115,22,0.1);color:#f97316;">13 def.</span>
+    </div>
+    <div class="cards-grid" id="grid-mgmt-c1"></div>
+  </div>
+
+  <div class="section-group" id="group-mgmt-c2">
+    <div class="section-header">
+      <div class="section-icon" style="background:rgba(232,121,249,0.15);color:#e879f9;">🧭</div>
+      <div>
+        <div class="section-title" style="color:#e879f9;">La strategie d'entreprise</div>
+        <div class="section-sub">Management Cours 2</div>
+      </div>
+      <span class="section-badge" style="background:rgba(232,121,249,0.1);color:#e879f9;">4 def.</span>
+    </div>
+    <div class="cards-grid" id="grid-mgmt-c2"></div>
   </div>
 
   </div><!-- /mainContent -->
@@ -1112,7 +1162,7 @@
 <div class="fc-overlay" id="fcOverlay">
   <div class="fc-header">
     <span class="fc-title">Mode Flashcard</span>
-    <span class="fc-counter" id="fcCounter">1 / 47</span>
+    <span class="fc-counter" id="fcCounter">1 / 176</span>
     <button class="fc-close" onclick="closeFlashcard()">Fermer</button>
   </div>
 
@@ -1120,6 +1170,7 @@
     <button class="fc-filter-chip active" data-fc-filter="all" onclick="setFcFilter('all')">Toutes</button>
     <button class="fc-filter-chip" data-fc-filter="droit" onclick="setFcFilter('droit')" style="color:#67e8f9">Droit</button>
     <button class="fc-filter-chip" data-fc-filter="eco" onclick="setFcFilter('eco')" style="color:#86efac">Economie</button>
+    <button class="fc-filter-chip" data-fc-filter="mgmt" onclick="setFcFilter('mgmt')" style="color:#f97316">Management</button>
     <button class="fc-filter-chip" data-fc-filter="todo" onclick="setFcFilter('todo')" style="color:#fbbf24">A apprendre</button>
   </div>
 
@@ -1153,86 +1204,224 @@
 
 <script>
 const DATA = [
-  // DROIT - Contrat
-  { id:1,  term:"Contrat",                cat:"droit-contrat",    color:"#60a5fa", def:"Accord de volontes entre deux ou plusieurs personnes, physiques ou morales, destine a creer, modifier, transmettre ou eteindre des obligations." },
-  { id:2,  term:"Pourparlers",            cat:"droit-contrat",    color:"#60a5fa", def:"Serie d'echanges ecrits ou verbaux entre une ou plusieurs personnes au cours d'une periode precontractuelle." },
-  { id:3,  term:"Offre",                  cat:"droit-contrat",    color:"#60a5fa", def:"Proposition ferme et precise d'une partie ; elle peut etre revoquee tant qu'elle n'a pas ete acceptee." },
-  { id:4,  term:"Acceptation",            cat:"droit-contrat",    color:"#60a5fa", def:"Manifestation de la volonte de l'autre partie de conclure le contrat aux conditions de l'offre." },
-  { id:5,  term:"Pacte de preference",    cat:"droit-contrat",    color:"#60a5fa", def:"Contrat par lequel une partie s'engage a proposer prioritairement a son beneficiaire de traiter avec lui s'il decide de contracter." },
-  { id:6,  term:"Promesse unilaterale",   cat:"droit-contrat",    color:"#60a5fa", def:"Contrat par lequel le promettant accorde au beneficiaire le droit d'opter pour la conclusion d'un contrat dont les elements essentiels sont determines." },
-  { id:7,  term:"Parties au contrat",     cat:"droit-contrat",    color:"#60a5fa", def:"Personnes qui donnent leur consentement au contrat, ce qui les engage de maniere irrevocable." },
-  { id:8,  term:"Cocontractant",          cat:"droit-contrat",    color:"#60a5fa", def:"Personne qui est partie a un contrat." },
-  { id:9,  term:"Tiers au contrat",       cat:"droit-contrat",    color:"#60a5fa", def:"Personne qui n'est pas partie au contrat ; elle n'est pas engagee par celui-ci et ne peut s'en prevaloir." },
-  { id:10, term:"Creancier",              cat:"droit-contrat",    color:"#60a5fa", def:"Personne qui possede une creance (un droit) sur une autre personne." },
-  { id:11, term:"Debiteur",               cat:"droit-contrat",    color:"#60a5fa", def:"Personne qui doit une somme d'argent ou une prestation a son creancier." },
-  { id:12, term:"Obligation de resultat", cat:"droit-contrat",    color:"#60a5fa", def:"Le debiteur s'engage a atteindre un resultat precis ; sa responsabilite est engagee s'il n'est pas obtenu." },
-  { id:13, term:"Obligation de moyens",   cat:"droit-contrat",    color:"#60a5fa", def:"Le debiteur s'engage a mettre en oeuvre tous les moyens necessaires pour tenter d'atteindre un but, sans le garantir." },
-  { id:14, term:"Dol",                    cat:"droit-contrat",    color:"#60a5fa", def:"Fait d'obtenir le consentement de l'autre par des manoeuvres, des mensonges ou la dissimulation intentionnelle d'une information determinante." },
-  { id:15, term:"Clause",                 cat:"droit-contrat",    color:"#60a5fa", def:"Disposition d'un contrat fixant un element de l'accord (obligation, modalite, sanction)." },
-  { id:16, term:"Clause de reserve de propriete", cat:"droit-contrat", color:"#60a5fa", def:"Permet au vendeur de rester proprietaire du bien jusqu'au paiement integral du prix." },
-  { id:17, term:"Clause penale",          cat:"droit-contrat",    color:"#60a5fa", def:"Fixe a l'avance le montant des dommages-interets dus en cas d'inexecution ou de retard." },
-  { id:18, term:"Clause resolutoire",     cat:"droit-contrat",    color:"#60a5fa", def:"Prevoit que le contrat sera resilie automatiquement en cas de manquement d'une partie." },
+  // DROIT C1 - Sources, hierarchie, juridictions
+  { id:1,   term:"Le droit",                     cat:"droit-c1", color:"#60a5fa", def:"Ce sont des regles qui regissent notre societe afin de l'organiser. Ces regles encadrent les rapports entre les personnes, qu'il s'agisse de personnes physiques (les individus) ou de personnes morales (comme les societes, associations ou institutions)." },
+  { id:2,   term:"Codification",                 cat:"droit-c1", color:"#60a5fa", def:"Les regles de droit sont rassemblees dans des ouvrages appeles codes (ex. Code civil, Code du travail)." },
+  { id:3,   term:"Jurisprudence",                cat:"droit-c1", color:"#60a5fa", def:"Ensemble des decisions des juges sur un point de droit donne." },
+  { id:4,   term:"Pyramide de Kelsen",           cat:"droit-c1", color:"#60a5fa", def:"Modele de la hierarchie des normes : ce qui est en dessous doit etre conforme a ce qui est au dessus." },
+  { id:5,   term:"Juridiction",                  cat:"droit-c1", color:"#60a5fa", def:"Une juridiction est un tribunal ou une cour, c'est-a-dire une instance chargee de rendre la justice en France." },
+  { id:6,   term:"Ordre administratif",          cat:"droit-c1", color:"#60a5fa", def:"L'ordre administratif est competent pour trancher les litiges entre les particuliers et l'administration." },
+  { id:7,   term:"Ordre judiciaire",             cat:"droit-c1", color:"#60a5fa", def:"L'ordre judiciaire concerne les litiges entre personnes physiques ou morales (matiere civile et penale)." },
+  { id:8,   term:"Conseil de prud'hommes",       cat:"droit-c1", color:"#60a5fa", def:"Regle les litiges individuels entre employeurs et salaries." },
+  { id:9,   term:"Tribunal de commerce",         cat:"droit-c1", color:"#60a5fa", def:"Competent pour les affaires entre commercants." },
+  { id:10,  term:"Tribunal judiciaire",          cat:"droit-c1", color:"#60a5fa", def:"Juridiction de droit commun : il s'occupe de toutes les affaires qui ne relevent pas des juridictions specialisees." },
+  { id:11,  term:"Jugement",                     cat:"droit-c1", color:"#60a5fa", def:"Decision rendue par les premiers juges en matiere civile." },
+  { id:12,  term:"Cour de cassation",            cat:"droit-c1", color:"#60a5fa", def:"Ne rejoue pas l'affaire : elle ne juge pas les faits, mais uniquement le droit." },
+  { id:13,  term:"Infractions",                  cat:"droit-c1", color:"#60a5fa", def:"En matiere penale, on distingue trois types d'infractions : les contraventions, les delits, et les crimes." },
+  { id:14,  term:"Tribunal des conflits",        cat:"droit-c1", color:"#60a5fa", def:"Determine quel ordre de juridiction est competent." },
 
-  // DROIT - Concurrence
-  { id:19, term:"Concurrence deloyale",       cat:"droit-concurrence", color:"#f472b6", def:"Pratique commerciale abusive (denigrement, desorganisation, confusion) causant un prejudice a un concurrent." },
-  { id:20, term:"Pratique anti-concurrentielle", cat:"droit-concurrence", color:"#f472b6", def:"Entente ou abus de position dominante empechant le libre jeu de la concurrence." },
-  { id:21, term:"Marque",                     cat:"droit-concurrence", color:"#f472b6", def:"Signe distinctif permettant d'identifier les produits ou services d'une entreprise et de les distinguer des concurrents." },
-  { id:22, term:"Brevet",                     cat:"droit-concurrence", color:"#f472b6", def:"Titre de propriete industrielle protegeant une invention technique nouvelle et inventive." },
+  // DROIT C2 - Les contrats et les partenaires
+  { id:15,  term:"Contrat",                      cat:"droit-c2", color:"#818cf8", def:"Le contrat est un accord de volontes entre deux ou plusieurs personnes destine a creer, modifier, transmettre ou eteindre des obligations. (Art 1101 du Code civil)" },
+  { id:16,  term:"Liberte contractuelle",        cat:"droit-c2", color:"#818cf8", def:"Chacun est libre de contracter ou de ne pas contracter, de choisir son cocontractant ou de decider du contenu du contrat dans les limites fixees par la loi. (Art 1102)" },
+  { id:17,  term:"Obligation d'information",     cat:"droit-c2", color:"#818cf8", def:"Chaque partie doit transmettre les informations necessaires a l'autre." },
+  { id:18,  term:"Pacte de preference (art. 1123)", cat:"droit-c2", color:"#818cf8", def:"Le pacte de preference est le contrat par lequel une partie s'engage a proposer prioritairement a son beneficiaire de traiter avec lui pour le cas ou elle deciderait de contracter." },
+  { id:19,  term:"Promesse unilaterale (art. 1124)", cat:"droit-c2", color:"#818cf8", def:"La promesse unilaterale est le contrat par lequel une partie, le promettant, accorde a l'autre, le beneficiaire, le droit d'opter pour la conclusion d'un contrat dont les elements essentiels sont determines, et pour la formation duquel ne manque que le consentement du beneficiaire." },
+  { id:20,  term:"Offre",                        cat:"droit-c2", color:"#818cf8", def:"Manifestation de volonte qui doit etre ferme, precise et susceptible d'acceptation pure et simple. Celui qui formule cette offre accepte d'etre lie par elle. L'offre doit etre exteriorisee : elle peut etre ecrite, orale, expresse ou tacite." },
+  { id:21,  term:"Acceptation",                  cat:"droit-c2", color:"#818cf8", def:"Manifestation de volonte de son auteur d'etre lie dans les termes de l'offre." },
+  { id:22,  term:"Erreur",                       cat:"droit-c2", color:"#818cf8", def:"L'erreur correspond a une appreciation erronee de la realite qui se fait seule. Elle est un vice du consentement lorsqu'elle a ete determinante, qu'elle est excusable et qu'elle porte sur les qualites essentielles de la prestation ou - dans les contrats intuitu personae - de la personne (art. 1132 et s. du Code civil). L'erreur doit porter sur les qualites substantielles essentielles qui font partie du contrat." },
+  { id:23,  term:"Le dol (art. 1137)",           cat:"droit-c2", color:"#818cf8", def:"Le dol est le fait pour un contractant d'obtenir le consentement de l'autre par des manoeuvres ou des mensonges. Constitue egalement un dol la dissimulation intentionnelle par l'un des contractants d'une information dont il sait le caractere determinant pour l'autre partie. Neanmoins, ne constitue pas un dol le fait pour une partie de ne pas reveler a son cocontractant son estimation de la valeur de la prestation." },
+  { id:24,  term:"La violence (art. 1140)",      cat:"droit-c2", color:"#818cf8", def:"Il y a violence lorsqu'une partie s'engage sous la pression d'une contrainte qui lui inspire la crainte d'exposer sa personne, sa fortune ou celles de ses proches a un mal considerable." },
+  { id:25,  term:"Clause",                       cat:"droit-c2", color:"#818cf8", def:"Une clause est une partie du contrat : une ou plusieurs phrases qui portent sur un sujet precis dans le texte d'un acte juridique, par exemple une clause de confidentialite." },
+  { id:26,  term:"Clause abusive",               cat:"droit-c2", color:"#818cf8", def:"Une clause abusive est une clause qui cree un desequilibre significatif entre les droits et les obligations des parties, au detriment du consommateur, dans un contrat conclu entre un consommateur et un professionnel." },
+  { id:27,  term:"Nullite du contrat",           cat:"droit-c2", color:"#818cf8", def:"Aneantissement retroactif du contrat." },
+  { id:28,  term:"Nullite relative",             cat:"droit-c2", color:"#818cf8", def:"La nullite relative s'applique lorsque la regle qu'on n'a pas respectee existe pour proteger l'interet prive d'une des parties au contrat." },
+  { id:29,  term:"Nullite absolue",              cat:"droit-c2", color:"#818cf8", def:"La nullite absolue s'applique lorsqu'on n'a pas respecte une regle qui existe pour proteger l'interet general." },
+  { id:30,  term:"Forclusion",                   cat:"droit-c2", color:"#818cf8", def:"Perte definitive du droit d'agir en justice pour non-respect du delai legal." },
 
-  // DROIT - Structures
-  { id:23, term:"Societe",                    cat:"droit-structure",   color:"#fb923c", def:"Personne morale distincte de ses associes, creee par un contrat pour realiser un profit ou une economie." },
-  { id:24, term:"Apport",                     cat:"droit-structure",   color:"#fb923c", def:"Bien (argent, nature ou industrie) mis en commun par les associes pour former le capital social." },
-  { id:25, term:"Actionnaires / Associes",    cat:"droit-structure",   color:"#fb923c", def:"Personnes detenant des parts ou actions dans une societe." },
-  { id:26, term:"Cooperative",                cat:"droit-structure",   color:"#fb923c", def:"Societe dont les membres s'associent pour satisfaire des besoins communs selon un principe d'egalite." },
-  { id:27, term:"Mutuelle",                   cat:"droit-structure",   color:"#fb923c", def:"Organisme a but non lucratif fonde sur la solidarite entre membres (protection sociale)." },
-  { id:28, term:"GIE",                        cat:"droit-structure",   color:"#fb923c", def:"Groupement d'Interet Economique : structure permettant a des entreprises de se regrouper pour une activite commune tout en restant independantes." },
+  // DROIT C3 - Effets et inexecution du contrat
+  { id:31,  term:"Parties au contrat",           cat:"droit-c3", color:"#a78bfa", def:"Les parties au contrat sont les personnes qui concluent le contrat. Elles sont liees par les obligations nees du contrat." },
+  { id:32,  term:"Cocontractant",                cat:"droit-c3", color:"#a78bfa", def:"Le cocontractant est l'autre partie au contrat, celle avec qui on a conclu l'accord. Chaque partie est le cocontractant de l'autre." },
+  { id:33,  term:"Tiers au contrat",             cat:"droit-c3", color:"#a78bfa", def:"Le tiers au contrat est une personne etrangere a l'accord, c'est-a-dire qui n'a pas participe a sa formation et n'est pas liee par les obligations qu'il cree." },
+  { id:34,  term:"Creancier",                    cat:"droit-c3", color:"#a78bfa", def:"Le creancier est la personne a qui une obligation est due. C'est celui qui a le droit d'exiger que l'autre partie execute la prestation prevue." },
+  { id:35,  term:"Debiteur",                     cat:"droit-c3", color:"#a78bfa", def:"Le debiteur est la personne qui doit executer l'obligation envers le creancier." },
+  { id:36,  term:"Obligation de moyens",         cat:"droit-c3", color:"#a78bfa", def:"Lorsqu'une partie a une obligation de moyens, cela signifie qu'elle s'engage a faire son possible, et donc a tout mettre en oeuvre, pour remplir son obligation prevue au contrat." },
+  { id:37,  term:"Obligation de resultat",       cat:"droit-c3", color:"#a78bfa", def:"La partie sur qui pese une obligation de resultat a l'obligation d'atteindre le resultat qu'on attend d'elle. Le resultat attendu doit etre tres precisement determine dans le contrat, par le biais de criteres objectifs, precis, voire mesurables. Si le resultat n'est pas atteint, elle commet une faute contractuelle et sa responsabilite est engagee." },
+  { id:38,  term:"Clause resolutoire",           cat:"droit-c3", color:"#a78bfa", def:"Clause par laquelle on va mettre un terme au contrat, si toutefois on ne respectait pas les engagements dans le contrat." },
+  { id:39,  term:"Clause penale",                cat:"droit-c3", color:"#a78bfa", def:"Clause fixant a l'avance le montant des dommages-interets." },
+  { id:40,  term:"Clause limitative ou exclusive de responsabilite", cat:"droit-c3", color:"#a78bfa", def:"Clause qui limite la responsabilite d'une partie en cas de faute ou de dommage." },
+  { id:41,  term:"Clause d'indexation",          cat:"droit-c3", color:"#a78bfa", def:"Clause permettant d'ajuster le prix ou une somme due en fonction d'un indice (ex : inflation)." },
+  { id:42,  term:"Clause de reserve de propriete", cat:"droit-c3", color:"#a78bfa", def:"Clause selon laquelle le vendeur reste proprietaire du bien jusqu'au paiement complet du prix." },
+  { id:43,  term:"Clause de dedit",              cat:"droit-c3", color:"#a78bfa", def:"Clause qui prevoit qu'on peut decider tout seul de mettre un terme au contrat." },
+  { id:44,  term:"Condition suspensive",         cat:"droit-c3", color:"#a78bfa", def:"Evenement futur et incertain dont depend la formation ou l'execution du contrat. Le contrat ne produit effet que si l'evenement se realise." },
+  { id:45,  term:"Inexecution du contrat",       cat:"droit-c3", color:"#a78bfa", def:"L'inexecution du contrat se produit lorsqu'une partie ne respecte pas les obligations qu'elle a librement acceptees. Cela peut etre un retard, une mauvaise execution, ou une absence totale d'execution ou partiellement execute." },
+  { id:46,  term:"Exception d'inexecution",      cat:"droit-c3", color:"#a78bfa", def:"Une partie peut refuser d'executer son obligation, alors meme que celle-ci est exigible, si l'autre n'execute pas la sienne et si cette inexecution est suffisamment grave." },
+  { id:47,  term:"Execution forcee en nature",   cat:"droit-c3", color:"#a78bfa", def:"Le creancier obtient, par la contrainte, que le debiteur execute exactement l'obligation prevue au contrat, comme elle aurait du l'etre initialement." },
+  { id:48,  term:"Reduction du prix",            cat:"droit-c3", color:"#a78bfa", def:"En cas d'execution imparfaite de la prestation, le creancier peut, apres mise en demeure et s'il n'a pas encore paye tout ou partie de la prestation, notifier dans les meilleurs delais au debiteur sa decision d'en reduire de maniere proportionnelle le prix. L'acceptation par le debiteur de la decision de reduction de prix du creancier doit etre redigee par ecrit. Si le creancier a deja paye, a defaut d'accord entre les parties, il peut demander au juge la reduction de prix." },
+  { id:49,  term:"Resolution",                   cat:"droit-c3", color:"#a78bfa", def:"La resolution resulte soit de l'application d'une clause resolutoire soit, en cas d'inexecution suffisamment grave, d'une notification du creancier au debiteur ou d'une decision de justice." },
+  { id:50,  term:"Responsabilite contractuelle", cat:"droit-c3", color:"#a78bfa", def:"Le debiteur est condamne, s'il y a lieu, au paiement de dommages et interets soit a raison de l'inexecution de l'obligation, soit a raison du retard dans l'execution, s'il ne justifie pas que l'execution a ete empechee par la force majeure." },
+  { id:51,  term:"Mise en demeure",              cat:"droit-c3", color:"#a78bfa", def:"Lettre de reclamation demandant d'accomplir ses obligations sous delai precis." },
+  { id:52,  term:"Contrat synallagmatique",      cat:"droit-c3", color:"#a78bfa", def:"Contrat dans lequel les parties s'engagent reciproquement." },
+  { id:53,  term:"Contrat unilateral",           cat:"droit-c3", color:"#a78bfa", def:"Un contrat est unilateral lorsqu'une ou plusieurs personnes s'obligent envers une ou plusieurs autres sans qu'il y ait d'engagement reciproque de celles-ci." },
+  { id:54,  term:"Contrat a titre onereux",      cat:"droit-c3", color:"#a78bfa", def:"Le contrat a titre onereux est celui qui assujettit chacune des parties a donner ou a faire quelque chose." },
+  { id:55,  term:"Contrat a titre gratuit",      cat:"droit-c3", color:"#a78bfa", def:"Un contrat est a titre gratuit lorsque l'une des parties procure a l'autre un avantage sans attendre ni recevoir de contrepartie." },
+  { id:56,  term:"Contrat commutatif",           cat:"droit-c3", color:"#a78bfa", def:"Un contrat commutatif est celui ou chacune des parties s'engage a procurer a l'autre un avantage qui est regarde comme l'equivalent de celui qu'elle recoit." },
+  { id:57,  term:"Contrat aleatoire",            cat:"droit-c3", color:"#a78bfa", def:"C'est un contrat dans lequel les parties acceptent de faire dependre les effets du contrat d'un evenement incertain." },
+  { id:58,  term:"Contrat consensuel",           cat:"droit-c3", color:"#a78bfa", def:"Il est consensuel lorsqu'il se forme par le seul echange des consentements quel qu'en soit le mode d'expression." },
+  { id:59,  term:"Contrat solennel",             cat:"droit-c3", color:"#a78bfa", def:"Le contrat est solennel lorsque sa validite est subordonnee a des formes determinees par la loi." },
+  { id:60,  term:"Contrat reel",                 cat:"droit-c3", color:"#a78bfa", def:"Le contrat est reel lorsque sa formation est subordonnee a la remise d'une chose." },
+  { id:61,  term:"Contrat de gre a gre",         cat:"droit-c3", color:"#a78bfa", def:"Le contrat de gre a gre est celui dont les stipulations sont negociables entre les parties." },
+  { id:62,  term:"Contrat d'adhesion",           cat:"droit-c3", color:"#a78bfa", def:"Le contrat d'adhesion est celui qui comporte un ensemble de clauses non negociables, determinees a l'avance par l'une des parties." },
+  { id:63,  term:"Contrat cadre",                cat:"droit-c3", color:"#a78bfa", def:"Le contrat cadre est un accord par lequel les parties conviennent des caracteristiques generales de leurs relations contractuelles futures. Des contrats d'application en precisent les modalites d'execution." },
+  { id:64,  term:"Contrat a execution instantanee", cat:"droit-c3", color:"#a78bfa", def:"Le contrat a execution instantanee est celui dont les obligations peuvent s'executer en une prestation unique." },
+  { id:65,  term:"Contrat a execution successive", cat:"droit-c3", color:"#a78bfa", def:"Le contrat a execution successive est celui dont les obligations d'au moins une partie s'executent en plusieurs prestations echelonnees dans le temps." },
+  { id:66,  term:"Contrat intuitu personae",     cat:"droit-c3", color:"#a78bfa", def:"Contrat conclu en consideration de la personne avec laquelle on le conclut." },
 
-  // ECO - Marche
-  { id:29, term:"Marche",                     cat:"eco-marche",        color:"#34d399", def:"Lieu (physique ou virtuel) de rencontre entre l'offre et la demande de biens ou de services." },
-  { id:30, term:"Loi de l'offre et la demande", cat:"eco-marche",     color:"#34d399", def:"Mecanisme ou le prix et les quantites varient selon la confrontation entre vendeurs et acheteurs." },
-  { id:31, term:"Monopole",                   cat:"eco-marche",        color:"#34d399", def:"Marche controle par un seul offreur." },
-  { id:32, term:"Oligopole",                  cat:"eco-marche",        color:"#34d399", def:"Marche avec un petit nombre d'offreurs face a de nombreux acheteurs." },
-  { id:33, term:"Externalite",                cat:"eco-marche",        color:"#34d399", def:"Effet (positif ou negatif) d'une activite economique sur un tiers sans transaction monetaire." },
-  { id:34, term:"Parties prenantes (Stakeholders)", cat:"eco-marche", color:"#34d399", def:"Acteurs ayant un interet dans les decisions de l'entreprise (internes/externes, primaires/secondaires)." },
-  { id:35, term:"RSE",                        cat:"eco-marche",        color:"#34d399", def:"Responsabilite Societale des Entreprises : integration volontaire des preoccupations sociales et environnementales aux activites de l'entreprise." },
+  // DROIT C4 - Concurrence
+  { id:67,  term:"Droit de la concurrence",      cat:"droit-c4", color:"#f472b6", def:"C'est l'ensemble des regles qui definissent les rapports qui encadrent les entreprises." },
+  { id:68,  term:"Concurrence deloyale",         cat:"droit-c4", color:"#f472b6", def:"Elle designe les comportements adoptes par une entreprise pour attirer la clientele d'un concurrent en ne respectant pas les regles de loyaute. Ces comportements sont fautifs ou frauduleux et portent atteinte a un autre concurrent." },
+  { id:69,  term:"Denigrement",                  cat:"droit-c4", color:"#f472b6", def:"Le fait de jeter le discredit sur un concurrent en tenant des propos ou des critiques malveillantes concernant les biens ou les services proposes par ce concurrent, dans le but d'en tirer un avantage." },
+  { id:70,  term:"Desorganisation",              cat:"droit-c4", color:"#f472b6", def:"Elle consiste a perturber le fonctionnement de l'entreprise concurrente, par exemple en debauchant massivement ses salaries, tant en nombre que par profils strategiques." },
+  { id:71,  term:"Imitation",                    cat:"droit-c4", color:"#f472b6", def:"L'imitation est le fait d'utiliser les memes signes distinctifs qu'une entreprise concurrente. Cette technique est deloyale lorsqu'elle cree une confusion entre les entreprises dans l'esprit du consommateur." },
+  { id:72,  term:"Parasitisme",                  cat:"droit-c4", color:"#f472b6", def:"Tirer indument profit du savoir-faire et des efforts humains et financiers consentis par une entreprise, victime des agissements de la personne qui usurpe la notoriete acquise par ce concurrent." },
+  { id:73,  term:"Entente",                      cat:"droit-c4", color:"#f472b6", def:"L'entente est une concertation entre 2 ou plusieurs entreprises independantes pour fixer une ligne de conduite qu'elles vont respecter et qui va porter atteinte a la concurrence. Elle peut concerner des entreprises concurrentes ou non concurrentes." },
+  { id:74,  term:"Procedure de clemence",        cat:"droit-c4", color:"#f472b6", def:"Quand une entreprise participe a l'entente, si on denonce l'entente, on va pouvoir etre soit pas du tout condamne, soit sanctionne partiellement." },
+  { id:75,  term:"Abus de position dominante",   cat:"droit-c4", color:"#f472b6", def:"L'abus de position dominante consiste, pour une entreprise presente sur un marche ou un groupe d'entreprises, a adopter un comportement visant a eliminer, contraindre ou dissuader tout concurrent d'entrer ou de se maintenir sur ce marche ou un marche connexe, faussant ainsi la concurrence. Trois conditions : l'existence d'une position dominante sur un marche pertinent ; une exploitation abusive de cette position ; un objet ou effet restrictif de concurrence." },
+  { id:76,  term:"Prix abusivement bas",         cat:"droit-c4", color:"#f472b6", def:"L'offre de prix abusivement bas par rapport aux couts de production, de transformation et de commercialisation constitue une pratique anticoncurrentielle interdite par le Code de commerce. Un prix est abusivement bas lorsqu'il vise a evincer des concurrents. Trois conditions : etre destine au consommateur final ; etre insuffisant pour couvrir les couts de production, de transformation et de commercialisation ; demontrer une intention ou possibilite d'eviction de concurrents." },
+  { id:77,  term:"Pratiques restrictives",       cat:"droit-c4", color:"#f472b6", def:"Les pratiques restrictives de concurrence regroupent des comportements prohibes dans les relations commerciales entre professionnels, prevus par le Code de commerce. Contrairement aux ententes ou abus de position dominante, l'analyse se concentre sur l'equilibre de la relation contractuelle entre les parties. Elles incluent : obtenir un avantage sans contrepartie ou disproportionne ; soumettre son partenaire a un desequilibre significatif ; imposer un prix de revente ; rompre brutalement une relation commerciale etablie." },
+  { id:78,  term:"Desequilibre significatif",    cat:"droit-c4", color:"#f472b6", def:"Le desequilibre significatif entre les droits et obligations des parties (art. L.442-1, I, 2 du Code de commerce) vise les situations ou une entreprise impose a son partenaire des obligations creant un desequilibre excessif. Ce desequilibre peut resulter de clauses permettant une modification unilaterale du contrat, d'un transfert de risques injustifie ou de sanctions disproportionnees. L'idee centrale est l'existence d'une asymetrie de pouvoir economique dans la relation contractuelle." },
+  { id:79,  term:"Rupture brutale",              cat:"droit-c4", color:"#f472b6", def:"Concerne la cessation soudaine ou insuffisamment anticipee d'une relation commerciale stable et reguliere." },
+  { id:80,  term:"Concentration",               cat:"droit-c4", color:"#f472b6", def:"La concentration correspond a une evolution concernant des societes qui existent deja et qui decident de se rapprocher ou de collaborer. Elle recouvre un ensemble d'operations qui peuvent conduire a la concentration du controle de plusieurs societes entre les mains d'une meme entite." },
 
-  // ECO - Etat
-  { id:36, term:"Politique economique",       cat:"eco-etat",          color:"#fbbf24", def:"Ensemble des decisions de l'Etat pour influencer l'activite economique (croissance, emploi, prix)." },
-  { id:37, term:"PIB",                        cat:"eco-etat",          color:"#fbbf24", def:"Produit Interieur Brut : valeur totale des richesses produites dans un pays en un an." },
-  { id:38, term:"Inflation",                  cat:"eco-etat",          color:"#fbbf24", def:"Hausse generale et durable du niveau des prix, reduisant le pouvoir d'achat." },
-  { id:39, term:"Taux de croissance",         cat:"eco-etat",          color:"#fbbf24", def:"Variation en pourcentage du PIB entre deux periodes." },
-  { id:40, term:"Valeur ajoutee",             cat:"eco-etat",          color:"#fbbf24", def:"Richesse reelle creee par une entreprise (Production - Consommations intermediaires)." },
+  // DROIT C5 - Propriete intellectuelle
+  { id:81,  term:"Marque",                       cat:"droit-c5", color:"#fb923c", def:"Signe distinctif qui va accompagner un produit, un service, un bien pour les distinguer des produits/services de ceux qui sont proposes par la concurrence." },
+  { id:82,  term:"Brevet",                       cat:"droit-c5", color:"#fb923c", def:"Le brevet est un acte officiel de propriete industrielle qui accorde un monopole d'exploitation au demandeur sur son invention sur le territoire francais pour une duree maximale de 20 ans." },
 
-  // ECO - Environnement
-  { id:41, term:"Methode PESTEL",             cat:"eco-env",           color:"#a78bfa", def:"Analyse du macro-environnement via 6 facteurs : Politique, Economique, Sociologique, Technologique, Ecologique, Legal." },
-  { id:42, term:"Innovation",                 cat:"eco-env",           color:"#a78bfa", def:"Introduction d'une nouveaute (produit, procede, organisation ou commercialisation) sur un marche." },
+  // DROIT C6 - Les societes
+  { id:83,  term:"Societe",                      cat:"droit-c6", color:"#fbbf24", def:"La societe est instituee par deux ou plusieurs personnes qui conviennent par un contrat d'affecter a une entreprise commune des biens ou leur industrie en vue de partager le benefice ou de profiter de l'economie qui pourra en resulter. Elle peut etre instituee, dans les cas prevus par la loi, par l'acte de volonte d'une seule personne. Les associes s'engagent a contribuer aux pertes." },
+  { id:84,  term:"Subdivision du patrimoine",    cat:"droit-c6", color:"#fbbf24", def:"En droit francais, une personne correspond normalement a un patrimoine, mais pour proteger l'entrepreneur individuel, le patrimoine est divise en deux parties : le patrimoine utile a l'activite professionnelle et le patrimoine personnel." },
+  { id:85,  term:"Communaute de biens reduite aux acquets", cat:"droit-c6", color:"#fbbf24", def:"Tous les biens acquis par l'un ou l'autre pendant le mariage n'appartiennent pas uniquement a celui qui les a achetes, mais aux deux." },
+  { id:86,  term:"Apport",                       cat:"droit-c6", color:"#fbbf24", def:"Les biens ou valeurs que les associes mettent a disposition de l'entreprise lors de sa creation. Ils peuvent etre en numeraire, en nature ou en industrie, chacun ayant des regles specifiques." },
+  { id:87,  term:"Apport en numeraire",          cat:"droit-c6", color:"#fbbf24", def:"Il s'agit de tout apport d'argent." },
+  { id:88,  term:"Apport en nature",             cat:"droit-c6", color:"#fbbf24", def:"Il s'agit de tout apport de biens autres que de l'argent, pouvant etre evalues pecuniairement et cedes. Leur variete est pratiquement illimitee (ex. : fonds de commerce, creance, marque, brevet, ordinateur, voiture, etc.)." },
+  { id:89,  term:"Apport en industrie",          cat:"droit-c6", color:"#fbbf24", def:"Un associe met a la disposition de la societe ses connaissances techniques, son travail ou ses services. De tels apports ne peuvent concourir a la formation du capital social." },
+  { id:90,  term:"Societes de personnes",        cat:"droit-c6", color:"#fbbf24", def:"Des societes dont le contrat d'association - les statuts - repose sur un fort intuitu personae. La forme juridique la plus connue de societe de personnes est la societe en nom collectif (SNC)." },
+  { id:91,  term:"Societes de capitaux",         cat:"droit-c6", color:"#fbbf24", def:"Des societes constituees dans le but de reunir des capitaux importants. Les qualites des associes entrent moins en compte. L'intuitu personae est moins fort. Ces societes sont tres majoritairement commerciales. Les formes juridiques incluent la SA, la SAS et la SASU." },
+  { id:92,  term:"Societes Mixtes",              cat:"droit-c6", color:"#fbbf24", def:"Comme leur nom l'indique, les societes mixtes sont a la fois des societes de capitaux et des societes de personnes. Elles empruntent certaines caracteristiques aux deux types de societes." },
 
-  // ECO - Production
-  { id:43, term:"Facteurs de production",     cat:"eco-prod",          color:"#67e8f9", def:"Ressources utilisees pour produire, principalement le travail (activite humaine) et le capital (moyens materiels)." },
-  { id:44, term:"Combinaison productive",     cat:"eco-prod",          color:"#67e8f9", def:"Proportion de capital et de travail choisie par l'entreprise pour produire." },
-  { id:45, term:"Productivite",               cat:"eco-prod",          color:"#67e8f9", def:"Mesure de l'efficacite des facteurs de production (Production / Moyens utilises)." },
-  { id:46, term:"Externalisation",            cat:"eco-prod",          color:"#67e8f9", def:"Fait de confier une activite a un prestataire exterieur (sous-traitance, franchise, etc.)." },
-  { id:47, term:"Chaine de valeur (Porter)",  cat:"eco-prod",          color:"#67e8f9", def:"Analyse des activites de l'entreprise pour identifier celles qui creent un avantage concurrentiel." },
+  // ECO C1 - Le marche et les Agents economiques
+  { id:93,  term:"Marche",                       cat:"eco-c1", color:"#34d399", def:"Lieu de rencontre entre l'offre et la demande, qu'il s'agisse de biens ou de services." },
+  { id:94,  term:"Marche de bien et service",    cat:"eco-c1", color:"#34d399", def:"Le marche des biens et des services est le lieu (reel ou virtuel) ou se rencontrent l'offre de produits ou prestations (principalement faite par les entreprises) et la demande exprimee par les menages, l'Etat, les collectivites ou d'autres organisations. Sur ce marche, se fixent le prix et les quantites echangees, selon la loi de l'offre et de la demande." },
+  { id:95,  term:"Marche du travail",            cat:"eco-c1", color:"#34d399", def:"C'est le lieu ou l'on rencontre l'offre et la demande de travail. La prestation qui est au coeur du marche, c'est le travail (sous differentes formes : manuel, intellectuel)." },
+  { id:96,  term:"Marche financier",             cat:"eco-c1", color:"#34d399", def:"Lieu (reel ou virtuel) ou s'organise la rencontre entre les capitaux disponibles et les besoins de financement des entreprises, de l'Etat ou d'autres acteurs. Il permet de realiser des operations (actions, obligations...) entre ceux qui ont besoin de financement et ceux qui placent leur epargne." },
+  { id:97,  term:"Alliance",                     cat:"eco-c1", color:"#34d399", def:"Les alliances existent parce qu'une entreprise doit atteindre une certaine taille pour etre prospere. En se mettant a plusieurs, elles peuvent atteindre cette taille et devenir rentables." },
+  { id:98,  term:"Partenariat",                  cat:"eco-c1", color:"#34d399", def:"Le partenariat designe des collaborations conclues avec d'autres structures qui ne sont pas concurrentes, mais avec lesquelles il existe un interet commun et une activite complementaire." },
+  { id:99,  term:"Taille critique",              cat:"eco-c1", color:"#34d399", def:"Le seuil a partir duquel une entreprise peut couvrir ses couts, etre rentable et degager du benefice." },
+  { id:100, term:"Concurrence",                  cat:"eco-c1", color:"#34d399", def:"En economie, la concurrence designe la situation dans laquelle plusieurs entreprises proposent des biens ou des services similaires sur un meme marche, dans le but de satisfaire la meme demande et de capter des parts de clientele. Elle suppose une rivalite entre offreurs pour attirer les clients et un enjeu sur les prix, la qualite, l'innovation ou les services." },
+  { id:101, term:"Marche concurrentiel",         cat:"eco-c1", color:"#34d399", def:"Marche ou il y a beaucoup d'entreprises qui vont proposer leurs biens et services, donc de nombreux acteurs. On a une pression concurrentielle importante. La concurrence peut porter sur le prix, la qualite, l'innovation ou l'image de marque." },
+  { id:102, term:"Concurrence pure et parfaite", cat:"eco-c1", color:"#34d399", def:"Modele theorique decrivant une concurrence maximale. Elle repose sur 5 hypotheses : 1. Atomicite : grand nombre d'acheteurs et vendeurs, aucun acteur n'influence seul le prix ; 2. Homogeneite du produit : biens identiques, seul critere de choix est le prix ; 3. Fluidite : libre entree et sortie du marche ; 4. Transparence de l'information : tous les agents connaissent parfaitement les prix et conditions (a defaut : asymetrie d'information) ; 5. Mobilite parfaite des facteurs : travail et capital se deplacent librement." },
+  { id:103, term:"Asymetrie d'information",      cat:"eco-c1", color:"#34d399", def:"Certains acteurs du marche sont parfois plus informes (ou mieux informes) que d'autres." },
+  { id:104, term:"Barrieres a l'entree",         cat:"eco-c1", color:"#34d399", def:"Les barrieres a l'entree sont des obstacles qui rendent difficile ou couteuse l'arrivee de nouveaux concurrents sur un marche." },
+  { id:105, term:"Externalites",                 cat:"eco-c1", color:"#34d399", def:"Les externalites sont les effets indirects induits par l'activite d'une entreprise. Ce sont des consequences vers l'exterieur : elles peuvent profiter a d'autres agents (externalites positives) ou nuire a d'autres agents (externalites negatives). Ces effets ne sont pas integres dans le prix de marche : il n'y a ni compensation systematique, ni paiement automatique." },
+  { id:106, term:"Pollueur-payeur",              cat:"eco-c1", color:"#34d399", def:"Toute personne ou entreprise qui cause une externalite negative (pollution, nuisances...) doit en assumer le cout." },
+  { id:107, term:"Dumping environnemental",      cat:"eco-c1", color:"#34d399", def:"Le dumping environnemental designe le fait, pour une entreprise ou un Etat, de profiter d'une reglementation plus laxiste dans un pays afin d'y produire a moindre cout, tout en generant davantage de pollution." },
+  { id:108, term:"Dumping social",               cat:"eco-c1", color:"#34d399", def:"Pratique qui consiste a faire produire ou employer des salaries dans des pays ou les couts de main-d'oeuvre et les protections sociales sont beaucoup plus faibles, afin de reduire les couts et fausser la concurrence." },
+  { id:109, term:"E-reputation",                 cat:"eco-c1", color:"#34d399", def:"L'e-reputation est l'image en ligne d'une entite : entreprise, personne ou organisation. Elle se construit notamment via les avis des clients/consommateurs, qui pesent fortement sur la perception publique." },
+  { id:110, term:"Loi de l'offre et de la demande", cat:"eco-c1", color:"#34d399", def:"La loi de l'offre et de la demande explique comment le prix et la quantite d'un bien ou d'un service se determinent sur un marche." },
+  { id:111, term:"Entreprise",                   cat:"eco-c1", color:"#34d399", def:"Une entreprise est un ensemble de moyens (humains, financiers, materiels) organises pour produire des biens et services destines au marche." },
+  { id:112, term:"Menage",                       cat:"eco-c1", color:"#34d399", def:"Groupe de personnes qui occupent un meme logement, sans forcement de lien de parente ; les menages disposent de revenus qu'ils vont utiliser pour consommer." },
+  { id:113, term:"Etat",                         cat:"eco-c1", color:"#34d399", def:"En economie, l'Etat comprend des subdivisions : collectivites et sphere publique (mairie/commune, departement, region). Toutes les collectivites jouent un role important dans l'economie, notamment parce que l'Etat recueille les impots et taxes et met en place des services publics (services non marchands)." },
+  { id:114, term:"Banque",                       cat:"eco-c1", color:"#34d399", def:"Une banque est un intermediaire financier qui : collecte l'epargne, accorde des prets, securise les paiements, propose des produits & services financiers aux agents qui en ont besoin." },
+  { id:115, term:"Flux reels",                   cat:"eco-c1", color:"#34d399", def:"Mouvements de biens et services, c'est l'objet de la prestation." },
+  { id:116, term:"Flux monetaires",              cat:"eco-c1", color:"#34d399", def:"Mouvements d'argent, c'est le reglement de la prestation." },
+  { id:117, term:"Marche primaire",              cat:"eco-c1", color:"#34d399", def:"Premiere emission des titres, les fonds arrivent chez l'emetteur." },
+  { id:118, term:"Marche secondaire",            cat:"eco-c1", color:"#34d399", def:"Revente/achat des titres deja emis entre investisseurs (ex. Bourse)." },
+
+  // ECO C2 - Role de l'Etat dans l'economie
+  { id:119, term:"Inflation",                    cat:"eco-c2", color:"#67e8f9", def:"L'inflation est l'augmentation durable et generale du niveau des prix." },
+  { id:120, term:"Deflation",                    cat:"eco-c2", color:"#67e8f9", def:"Baisse durable et auto-entretenue du niveau general des prix." },
+  { id:121, term:"Fonctions regaliennes",        cat:"eco-c2", color:"#67e8f9", def:"Les missions fondamentales de l'Etat (Justice, Police, Defense, Diplomatie)." },
+  { id:122, term:"Politique economique",         cat:"eco-c2", color:"#67e8f9", def:"Ensemble des decisions prises par les pouvoirs publics pour gerer l'economie." },
+  { id:123, term:"Politique monetaire",          cat:"eco-c2", color:"#67e8f9", def:"Actions visant a reguler la quantite de monnaie en circulation pour controler l'inflation. La politique monetaire, menee par la banque centrale, a pour principal objectif le maintien de la stabilite des prix. On influence l'activite economique en faisant varier des taux ou en faisant varier la quantite de monnaie en circulation." },
+  { id:124, term:"Politique budgetaire",         cat:"eco-c2", color:"#67e8f9", def:"Utilisation du budget de l'Etat (recettes et depenses) pour influencer l'activite economique. C'est l'ensemble des actions visant a agir sur la situation macroeconomique en utilisant le budget des administrations publiques." },
+  { id:125, term:"Carre magique",                cat:"eco-c2", color:"#67e8f9", def:"Le carre magique de Kaldor est un schema de representation de la situation economique d'un pays a partir de 4 grands objectifs : 1. Croissance economique elevee (taux de croissance du PIB) ; 2. Chomage faible / plein emploi ; 3. Inflation maitrisee (stabilite des prix, autour de 2% a moyen terme) ; 4. Equilibre exterieur (balance commerciale ou des paiements proche de l'equilibre)." },
+  { id:126, term:"Politique conjoncturelle",     cat:"eco-c2", color:"#67e8f9", def:"Corriger les fluctuations a court terme pour temperer et moderer les desequilibres economiques (la 'conjoncture' = momentane)." },
+  { id:127, term:"Politique structurelle",       cat:"eco-c2", color:"#67e8f9", def:"Modifier durablement le fonctionnement de l'economie (sa 'structure') afin d'augmenter la croissance potentielle, la competitivite et l'efficacite globale de l'economie." },
+  { id:128, term:"Developpement",               cat:"eco-c2", color:"#67e8f9", def:"Le developpement est un ensemble de transformations qualitatives qui accompagnent une croissance durable : evolution des structures economiques, sociales et culturelles d'un pays donne." },
+  { id:129, term:"Deficit vs dette",             cat:"eco-c2", color:"#67e8f9", def:"Le deficit public est le solde budgetaire de l'Etat sur une annee, tandis que la dette s'accumule." },
+  { id:130, term:"Deficit public",              cat:"eco-c2", color:"#67e8f9", def:"Le deficit public est le solde budgetaire de l'Etat sur une annee, tandis que la dette publique s'accumule annee apres annee. Il faut distinguer deficit (solde annuel) et dette (accumulation)." },
+  { id:131, term:"Fonctions de l'Etat (Musgrave)", cat:"eco-c2", color:"#67e8f9", def:"Richard Musgrave identifie trois fonctions economiques de l'Etat : allocation (production de biens publics), redistribution (reduction des inegalites), stabilisation (regulation conjoncturelle)." },
+
+  // ECO C3 - Facteurs de production
+  { id:132, term:"Facteurs de production",       cat:"eco-c3", color:"#86efac", def:"Les facteurs de production sont l'ensemble des elements necessaires a la production, a savoir le travail et le capital. Pour produire a moindre cout, l'entreprise doit associer ces facteurs et trouver la meilleure combinaison possible entre eux." },
+  { id:133, term:"Facteur travail",              cat:"eco-c3", color:"#86efac", def:"Activite humaine qui permettent de produire les biens et services, ce sont des activites manuelles, intellectuelles pour produire des biens et des services. Il correspond au travail fourni par les salaries au sein de l'entreprise. On a une approche quantitative (combien de salaries et d'heures de travail) mais aussi qualitative (les competences du salarie)." },
+  { id:134, term:"Facteur capital",              cat:"eco-c3", color:"#86efac", def:"Ensemble des biens et moyens dont on dispose pour pouvoir produire les biens et services. On evoque essentiellement les biens durables utilises dans le processus de production. On subdivise en : capital fixe (capital technique reutilisable d'un cycle de production a un autre) et capital circulant (matieres premieres, services fournis, utilises et detruits a premiere utilisation)." },
+  { id:135, term:"Processus productif",          cat:"eco-c3", color:"#86efac", def:"L'ensemble des etapes et des procedures mises en oeuvre pour transformer les matieres premieres en un produit fini." },
+  { id:136, term:"Combinaison productive",       cat:"eco-c3", color:"#86efac", def:"La combinaison productive est la maniere dont une organisation associe travail, capital, technologie et ressources naturelles pour produire efficacement. Les entreprises adaptent leur combinaison en fonction du cout relatif des facteurs et de la recherche de productivite." },
+  { id:137, term:"Combinaison productive travaillistique", cat:"eco-c3", color:"#86efac", def:"Une combinaison productive travaillistique designe une combinaison productive dans laquelle le facteur travail est predominant par rapport au capital." },
+  { id:138, term:"Combinaison productive capitalistique", cat:"eco-c3", color:"#86efac", def:"Lorsque le capital (machines, robots, technologies) est dominant par rapport au travail." },
+  { id:139, term:"Cout du travail",              cat:"eco-c3", color:"#86efac", def:"Il comprend le salaire brut (salaire net avec les cotisations a la charge des salaries) et les cotisations sociales patronales." },
+  { id:140, term:"Cout du capital",              cat:"eco-c3", color:"#86efac", def:"Le cout du capital depend principalement du prix des matieres premieres (cout du capital circulant) et composants ainsi que du niveau des taux d'interet (cout du capital fixe)." },
+  { id:141, term:"Couts de production",          cat:"eco-c3", color:"#86efac", def:"Correspondent a l'ensemble des couts engages par l'entreprise dans le cadre de son processus productif pour produire des biens ou des services. Ils regroupent : le cout du travail, le cout du facteur capital et les consommations intermediaires." },
+  { id:142, term:"La productivite",              cat:"eco-c3", color:"#86efac", def:"En economie, la productivite est definie comme le rapport, en volume, entre une production et les ressources mises en oeuvre pour l'obtenir." },
+  { id:143, term:"Productivite du travail",      cat:"eco-c3", color:"#86efac", def:"Correspond au rapport entre la quantite produite et la quantite de travail utilisee. Cette quantite de travail peut etre mesuree en nombre d'heures de travail, ou en nombre de salaries (productivite par 'tete')." },
+  { id:144, term:"Productivite du capital",      cat:"eco-c3", color:"#86efac", def:"Correspond au rapport entre la production realisee et la quantite de capital utilisee (machines, equipements, technologies)." },
+  { id:145, term:"Couts fixes",                  cat:"eco-c3", color:"#86efac", def:"Les couts fixes sont des couts qui restent constants, quel que soit le montant produit ou vendu par l'entreprise. La variation de la production n'influence pas ces couts : ils sont independants du niveau de production de l'entreprise." },
+  { id:146, term:"Couts variables",              cat:"eco-c3", color:"#86efac", def:"Les couts variables sont des couts qui changent en fonction de la quantite produite ou vendue par l'entreprise. Ces couts vont etre fonction du niveau de production." },
+  { id:147, term:"Economie d'echelle",           cat:"eco-c3", color:"#86efac", def:"Une economie d'echelle correspond a la baisse du cout unitaire d'un produit qu'obtient une entreprise en accroissant la quantite de sa production." },
+  { id:148, term:"Couts directs",                cat:"eco-c3", color:"#86efac", def:"Les couts directs sont immediatement imputables au cout d'un produit, lies directement a sa production (exemple : matieres premieres)." },
+  { id:149, term:"Couts indirects",              cat:"eco-c3", color:"#86efac", def:"Les couts indirects ne sont pas imputables immediatement au cout d'un produit, par exemple les assurances que l'entreprise doit souscrire." },
+  { id:150, term:"Gains de productivite",        cat:"eco-c3", color:"#86efac", def:"Un gain de productivite correspond a une augmentation de la production sans augmentation proportionnelle des facteurs de production (travail ou capital)." },
+  { id:151, term:"Impartition",                  cat:"eco-c3", color:"#86efac", def:"L'impartition consiste a deleguer a d'autres une partie des activites que l'entreprise aurait pu realiser elle-meme. Elle confie ainsi a des partenaires la realisation d'une partie de ses activites." },
+  { id:152, term:"La sous-traitance",            cat:"eco-c3", color:"#86efac", def:"L'entreprise confie une tache precise a un prestataire tout en conservant la responsabilite globale. On a un donneur d'ordre qui confie a un sous-traitant une partie du contrat ; on fait ca quand on ne dispose pas des competences ou d'une partie du contrat." },
+  { id:153, term:"L'externalisation",            cat:"eco-c3", color:"#86efac", def:"L'entreprise transfere durablement une activite entiere a un prestataire externe. On va externaliser ce qui n'est pas le coeur de notre metier." },
+  { id:154, term:"La co-traitance",              cat:"eco-c3", color:"#86efac", def:"Accord momentane entre des entreprises pour elaborer une offre commune en reponse a un marche public. Il permet aux entreprises de s'organiser pour repondre a un marche auquel elles ne peuvent candidater seules." },
+  { id:155, term:"La franchise",                 cat:"eco-c3", color:"#86efac", def:"La franchise est un mode de distribution dans lequel le franchiseur met a la disposition du franchise un ensemble d'elements, tels que la marque, le savoir-faire et une assistance, afin de lui permettre d'exploiter son activite sous la banniere de l'entreprise du franchiseur. L'entreprise franchisee, bien qu'independante, commercialise les produits et services de l'enseigne en echange du versement d'une redevance." },
+  { id:156, term:"La concession",                cat:"eco-c3", color:"#86efac", def:"Un commercant reserve les produits d'un fournisseur, en contrepartie de certaines restrictions telles que des quotas de vente ou des obligations comme la participation a des actions promotionnelles. La concession peut etre selective ou exclusive (clause d'exclusivite). Les concedants approvisionnent les concessionnaires, et les concessionnaires les commercialisent." },
+  { id:157, term:"Joint-venture",                cat:"eco-c3", color:"#86efac", def:"Projet commun dans lequel des entreprises s'organisent autour d'une strategie commune, formalisee par un contrat afin d'en organiser le fonctionnement." },
+  { id:158, term:"GIE (Groupement d'Interet Economique)", cat:"eco-c3", color:"#86efac", def:"Groupement que differentes entreprises vont organiser pour faciliter leur propre activite, mettre des elements en commun et ainsi faciliter l'activite qui est la leur." },
+  { id:159, term:"Chaine de valeur",             cat:"eco-c3", color:"#86efac", def:"Outil d'analyse strategique propose par Michael Porter. Elle permet d'identifier les differentes activites realisees par une entreprise afin de comprendre comment elle cree de la valeur et obtient un avantage concurrentiel." },
+
+  // MANAGEMENT C1 - L'entreprise et ses parties prenantes
+  { id:160, term:"Entrepreneur",                 cat:"mgmt-c1", color:"#f97316", def:"L'entrepreneur est une personne qui cree ou developpe une entreprise, en prenant des risques financiers et organisationnels pour mettre en oeuvre une idee nouvelle et degager un profit." },
+  { id:161, term:"Manager",                      cat:"mgmt-c1", color:"#f97316", def:"Le manager est celui qui organise, coordonne et motive les equipes pour atteindre les objectifs fixes par l'entreprise. Il ne cree pas necessairement l'entreprise : il gere une structure existante." },
+  { id:162, term:"Logique entrepreneuriale",     cat:"mgmt-c1", color:"#f97316", def:"Il n'existe pas de definition officielle de cette logique, mais elle regroupe les activites et initiatives que l'on va prendre pour creer une entreprise, la developper et faire en sorte que cette activite puisse etre effective." },
+  { id:163, term:"Logique manageriale",          cat:"mgmt-c1", color:"#f97316", def:"Optimisation des ressources dont on dispose (materielles, humaines, financieres) pour atteindre les objectifs fixes." },
+  { id:164, term:"Parties prenantes",            cat:"mgmt-c1", color:"#f97316", def:"Les parties prenantes sont toutes les personnes ou groupes qui ont un interet direct ou indirect dans les activites de l'entreprise." },
+  { id:165, term:"Finalite d'une entreprise",    cat:"mgmt-c1", color:"#f97316", def:"La finalite d'une entreprise correspond a sa raison d'etre : ce qu'elle cherche a accomplir sur le long terme." },
+  { id:166, term:"RSE",                          cat:"mgmt-c1", color:"#f97316", def:"La Responsabilite Societale des Entreprises (RSE) designe l'integration volontaire par les entreprises de preoccupations sociales, environnementales et ethiques dans leurs activites economiques." },
+  { id:167, term:"Performance d'une entreprise", cat:"mgmt-c1", color:"#f97316", def:"La performance d'une entreprise est la mesure dans laquelle elle est capable d'atteindre ses propres objectifs. Elle revetu plusieurs dimensions : economique et financiere, mais aussi commerciale, sociale et environnementale. Autrement dit, etre performant c'est 'est-ce que j'atteins mes objectifs ?'." },
+  { id:168, term:"Efficacite",                   cat:"mgmt-c1", color:"#f97316", def:"L'efficacite designe la capacite a atteindre l'objectif fixe : on juge le resultat par rapport a la cible." },
+  { id:169, term:"Efficience",                   cat:"mgmt-c1", color:"#f97316", def:"L'efficience designe la capacite a atteindre cet objectif avec un usage minimal des ressources (temps, budget, energie, effectifs) : deux equipes qui vendent 1000 unites sont toutes deux efficaces, mais la plus efficiente est celle qui y parvient avec moins d'heures ou de couts." },
+  { id:170, term:"Pertinence",                   cat:"mgmt-c1", color:"#f97316", def:"La pertinence designe la relation entre moyens utilises et objectifs fixes." },
+  { id:171, term:"Tableau de bord",              cat:"mgmt-c1", color:"#f97316", def:"Un tableau de bord est un outil de pilotage qui rassemble, sur une meme vue, un petit nombre d'indicateurs cles (KPI) permettant de suivre l'atteinte des objectifs, detecter les ecarts et decider rapidement des actions a mener." },
+  { id:172, term:"Business plan",                cat:"mgmt-c1", color:"#f97316", def:"Document important pour formaliser le projet, c'est pour presenter le projet aux potentiels investisseurs." },
+
+  // MANAGEMENT C2 - Strategie d'entreprise
+  { id:173, term:"Micro-environnement",          cat:"mgmt-c2", color:"#e879f9", def:"Le micro-environnement designe l'ensemble des acteurs avec lesquels votre entreprise interagit directement au quotidien. Contrairement au macro-environnement, ces forces sont relativement maitrisables et vous pouvez agir sur elles par vos decisions commerciales et operationnelles." },
+  { id:174, term:"Macro-environnement",          cat:"mgmt-c2", color:"#e879f9", def:"Le macro-environnement englobe l'ensemble des facteurs qui vont influencer la prise de decision de l'entreprise, mais elle en retour n'a pas d'influence dessus ou tres peu. Ces differents facteurs sont les facteurs qui composent le PESTEL." },
+  { id:175, term:"Developpement durable",        cat:"mgmt-c2", color:"#e879f9", def:"Un developpement qui repond aux besoins du present sans compromettre la capacite des generations futures de repondre aux leurs. Il repose sur trois piliers : ecologique, social, economique." },
+  { id:176, term:"Innovation",                   cat:"mgmt-c2", color:"#e879f9", def:"L'OCDE definit l'innovation comme la mise en oeuvre d'un produit (bien ou service) ou d'un procede nouveau ou sensiblement ameliore, d'une nouvelle methode de commercialisation ou d'une nouvelle methode organisationnelle dans les pratiques de l'entreprise, l'organisation du lieu de travail ou les relations exterieures (OCDE, 2005). Elle considere ainsi quatre categories d'innovation : l'innovation de produit, de procede, d'organisation et de commercialisation." },
 ];
 
 const GRIDS = {
-  "droit-contrat":    "grid-droit-contrat",
-  "droit-concurrence":"grid-droit-concurrence",
-  "droit-structure":  "grid-droit-structure",
-  "eco-marche":       "grid-eco-marche",
-  "eco-etat":         "grid-eco-etat",
-  "eco-env":          "grid-eco-env",
-  "eco-prod":         "grid-eco-prod",
+  "droit-c1":"grid-droit-c1","droit-c2":"grid-droit-c2","droit-c3":"grid-droit-c3",
+  "droit-c4":"grid-droit-c4","droit-c5":"grid-droit-c5","droit-c6":"grid-droit-c6",
+  "eco-c1":"grid-eco-c1","eco-c2":"grid-eco-c2","eco-c3":"grid-eco-c3",
+  "mgmt-c1":"grid-mgmt-c1","mgmt-c2":"grid-mgmt-c2",
 };
 
 const CAT_LABELS = {
-  "droit-contrat":    "Droit - Formation du contrat",
-  "droit-concurrence":"Droit - Concurrence & Propriete",
-  "droit-structure":  "Droit - Structures Juridiques",
-  "eco-marche":       "Eco - Marche & Entreprise",
-  "eco-etat":         "Eco - Etat & Politiques",
-  "eco-env":          "Eco - Environnement & Innovation",
-  "eco-prod":         "Eco - Production & Facteurs",
+  "droit-c1":"Droit C1 - Sources & Juridictions",
+  "droit-c2":"Droit C2 - Formation du contrat",
+  "droit-c3":"Droit C3 - Effets & inexecution",
+  "droit-c4":"Droit C4 - Concurrence",
+  "droit-c5":"Droit C5 - Propriete intellectuelle",
+  "droit-c6":"Droit C6 - Les societes",
+  "eco-c1":"Eco C1 - Marche & Agents",
+  "eco-c2":"Eco C2 - Role de l'Etat",
+  "eco-c3":"Eco C3 - Facteurs de production",
+  "mgmt-c1":"Management C1 - Parties prenantes",
+  "mgmt-c2":"Management C2 - Strategie",
 };
 
 let learned = JSON.parse(localStorage.getItem('learned') || '{}');
@@ -1343,6 +1532,8 @@ function applyTabFilter() {
       g.style.display = id.startsWith('droit') ? '' : 'none';
     } else if (currentTab === 'eco') {
       g.style.display = id.startsWith('eco') ? '' : 'none';
+    } else if (currentTab === 'mgmt') {
+      g.style.display = id.startsWith('mgmt') ? '' : 'none';
     }
   });
 }
@@ -1521,16 +1712,18 @@ let fcIndex = 0;
 let fcFilter = 'all';
 let fcIsFlipped = false;
 const FC_CAT_COLORS = {
-  "droit-contrat":"#60a5fa","droit-concurrence":"#f472b6","droit-structure":"#fb923c",
-  "eco-marche":"#34d399","eco-etat":"#fbbf24","eco-env":"#a78bfa","eco-prod":"#67e8f9"
+  "droit-c1":"#60a5fa","droit-c2":"#818cf8","droit-c3":"#a78bfa",
+  "droit-c4":"#f472b6","droit-c5":"#fb923c","droit-c6":"#fbbf24",
+  "eco-c1":"#34d399","eco-c2":"#67e8f9","eco-c3":"#86efac",
+  "mgmt-c1":"#f97316","mgmt-c2":"#e879f9"
 };
 
 function buildFcDeck() {
   let pool = [...DATA];
   if (fcFilter === 'droit') pool = pool.filter(d => d.cat.startsWith('droit'));
   else if (fcFilter === 'eco') pool = pool.filter(d => d.cat.startsWith('eco'));
+  else if (fcFilter === 'mgmt') pool = pool.filter(d => d.cat.startsWith('mgmt'));
   else if (fcFilter === 'todo') pool = pool.filter(d => !isLearned(d.id));
-  // shuffle
   for (let i = pool.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
     [pool[i], pool[j]] = [pool[j], pool[i]];
