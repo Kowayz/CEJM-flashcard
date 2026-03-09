@@ -243,13 +243,22 @@
 
   .card-preview {
     font-size: 0.75rem;
-    color: #64748b;
-    line-height: 1.4;
-    display: -webkit-box;
-    -webkit-line-clamp: 2;
-    -webkit-box-orient: vertical;
-    overflow: hidden;
+    color: #94a3b8;
+    line-height: 1.55;
+    margin-top: 8px;
+    display: none;
   }
+
+  .card-preview.visible { display: block; }
+
+  .card-reveal-hint {
+    font-size: 0.7rem;
+    color: #334155;
+    margin-top: 6px;
+    font-style: italic;
+  }
+
+  .card.revealed .card-reveal-hint { display: none; }
 
   .card-actions {
     display: flex;
@@ -1274,21 +1283,30 @@ function createCard(item, highlight='') {
 
   div.innerHTML = `
     <div class="learned-check">&#10003;</div>
-    <div class="card-front" onclick="openModal(${item.id})">
+    <div class="card-front">
       <div class="card-term">
         <span class="card-dot" style="background:${item.color}"></span>
         <span>${termHl}</span>
       </div>
+      <div class="card-reveal-hint">Cliquer pour voir la definition</div>
       <div class="card-preview">${defHl}</div>
     </div>
     <div class="card-actions">
-      <button class="btn-show" onclick="openModal(${item.id})">Voir definition</button>
+      <button class="btn-show" onclick="toggleCardDef(this, ${item.id})">Voir</button>
       <button class="btn-learned ${isLearned(item.id)?'active':''}" onclick="toggleLearned(${item.id})">
         ${isLearned(item.id) ? '&#10003; Appris' : 'Marquer appris'}
       </button>
     </div>
   `;
   return div;
+}
+
+function toggleCardDef(btn, id) {
+  const card = btn.closest('.card');
+  const preview = card.querySelector('.card-preview');
+  const shown = preview.classList.toggle('visible');
+  card.classList.toggle('revealed', shown);
+  btn.textContent = shown ? 'Cacher' : 'Voir';
 }
 
 function escRe(s) {
