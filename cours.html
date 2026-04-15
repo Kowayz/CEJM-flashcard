@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CEJM · Cours</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800;900&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+<style>
+/* ── COURS PAGE ──────────────────────────────────────────── */
+.cours-main {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 36px 32px 60px;
+  position: relative;
+  z-index: 1;
+}
+
+/* ── HUB ─────────────────────────────────────────────────── */
+.cours-hub-hero {
+  background: linear-gradient(135deg, rgba(99,102,241,0.07) 0%, rgba(52,211,153,0.05) 50%, rgba(96,165,250,0.07) 100%);
+  border: 1px solid rgba(99,102,241,0.15);
+  border-radius: 20px;
+  padding: 32px 36px;
+  margin-bottom: 36px;
+  position: relative;
+  overflow: hidden;
+}
+.cours-hub-hero::before {
+  content: '';
+  position: absolute;
+  top: -50px; right: -50px;
+  width: 260px; height: 260px;
+  background: radial-gradient(circle, rgba(99,102,241,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
+.cours-hub-eyebrow {
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #6366f1;
+  margin-bottom: 10px;
+}
+.cours-hub-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: clamp(1.6rem, 3vw, 2.1rem);
+  font-weight: 900;
+  color: #f1f5f9;
+  letter-spacing: -0.03em;
+  line-height: 1.1;
+  margin-bottom: 8px;
+}
+.cours-hub-sub {
+  font-size: 0.85rem;
+  color: #64748b;
+  line-height: 1.6;
+}
+.cours-hub-stats {
+  display: flex;
+  gap: 24px;
+  margin-top: 20px;
+}
+.cours-hub-stat-num {
+  font-family: 'Outfit', sans-serif;
+  font-size: 1.4rem;
+  font-weight: 800;
+  color: #f1f5f9;
+  line-height: 1;
+}
+.cours-hub-stat-label { font-size: 0.68rem; color: #475569; margin-top: 2px; }
+
+.cours-hub-subject { margin-bottom: 32px; }
+.cours-hub-subject-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.62rem;
+  font-weight: 700;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+.cours-hub-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 12px;
+}
+
+.cours-hub-card {
+  background: rgba(255,255,255,0.025);
+  border: 1px solid rgba(255,255,255,0.07);
+  border-radius: 14px;
+  padding: 20px 20px 16px;
+  cursor: pointer;
+  transition: all 0.2s;
+  position: relative;
+  overflow: hidden;
+}
+.cours-hub-card::before {
+  content: '';
+  position: absolute;
+  left: 0; top: 0; bottom: 0;
+  width: 3px;
+  background: var(--chap-color, #6366f1);
+  opacity: 0.7;
+  transition: opacity 0.2s;
+}
+.cours-hub-card:hover {
+  background: rgba(255,255,255,0.05);
+  border-color: rgba(255,255,255,0.12);
+  transform: translateY(-2px);
+}
+.cours-hub-card:hover::before { opacity: 1; }
+.cours-hub-card-icon { font-size: 1.3rem; margin-bottom: 10px; }
+.cours-hub-card-title {
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 800;
+  margin-bottom: 5px;
+  letter-spacing: -0.01em;
+}
+.cours-hub-card-sub {
+  font-size: 0.73rem;
+  color: #475569;
+  line-height: 1.5;
+  padding-right: 20px;
+}
+.cours-hub-card-arrow {
+  position: absolute;
+  bottom: 14px; right: 16px;
+  font-size: 0.8rem;
+  color: #1e293b;
+  transition: color 0.2s, transform 0.2s;
+}
+.cours-hub-card:hover .cours-hub-card-arrow { color: #475569; transform: translateX(3px); }
+
+/* ── CHAPTER HEADER (cours page) ─────────────────────────── */
+.cours-chapter-head {
+  margin-bottom: 24px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  display: flex;
+  align-items: flex-start;
+  gap: 16px;
+}
+.cours-chapter-flashcard-btn {
+  margin-left: auto;
+  flex-shrink: 0;
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  background: rgba(99,102,241,0.08);
+  border: 1px solid rgba(99,102,241,0.2);
+  color: #818cf8;
+  padding: 8px 16px;
+  border-radius: 9px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.2s;
+  font-family: 'DM Sans', sans-serif;
+}
+.cours-chapter-flashcard-btn:hover {
+  background: rgba(99,102,241,0.15);
+  border-color: rgba(99,102,241,0.4);
+  color: #a5b4fc;
+}
+
+@media (max-width: 640px) {
+  .cours-main { padding: 20px 16px 48px; }
+  .cours-hub-hero { padding: 24px 20px; }
+  .cours-hub-stats { gap: 16px; }
+  .cours-hub-grid { grid-template-columns: 1fr; }
+  .cours-chapter-head { flex-wrap: wrap; }
+  .cours-chapter-flashcard-btn { margin-left: 0; }
+}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header>
+  <div class="header-brand">
+    <h1>Cours <span class="header-brand-sub">· CEJM</span></h1>
+  </div>
+  <a href="index.html" class="back-btn" style="text-decoration:none;margin-bottom:0;flex-shrink:0;">
+    ← Fiches de révision
+  </a>
+</header>
+
+<!-- CONTENU -->
+<div class="cours-main main" id="coursContent"></div>
+
+<!-- Toast -->
+<div class="toast" id="toast"></div>
+
+<script src="js/data.js"></script>
+<script src="js/storage.js"></script>
+<script src="js/reader.js"></script>
+<script src="js/cours.js"></script>
+
+</body>
+</html>
