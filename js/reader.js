@@ -150,6 +150,29 @@ function renderReader(chapterId, container) {
     container.appendChild(schemaBlock);
   }
 
+  // ── Fiche Examen ───────────────────────────────────────
+  if (chapter.examFocus) {
+    const ef = chapter.examFocus;
+    const examBlock = document.createElement('div');
+    examBlock.className = 'exam-focus-block';
+    let html = `<div class="exam-focus-header"><span class="exam-focus-icon">🎯</span><div><div class="exam-focus-title">Fiche Examen</div><div class="exam-focus-subtitle">Points clés · Méthode RAC · Pièges à éviter</div></div></div>`;
+    if (ef.pointsCles && ef.pointsCles.length) {
+      html += `<div class="exam-section-label">📌 À savoir absolument</div><ul class="exam-points-list">`;
+      ef.pointsCles.forEach(p => { html += `<li>${p}</li>`; });
+      html += `</ul>`;
+    }
+    if (ef.rac) {
+      html += `<div class="exam-section-label">✏️ Méthode RAC — Exemple type</div><div class="exam-rac-block"><div class="rac-row"><span class="rac-label rac-s">Situation</span><span>${ef.rac.situation}</span></div><div class="rac-row"><span class="rac-label rac-r">Règle</span><span>${ef.rac.regle}</span></div><div class="rac-row"><span class="rac-label rac-a">Application</span><span>${ef.rac.application}</span></div><div class="rac-row"><span class="rac-label rac-c">Conclusion</span><span>${ef.rac.conclusion}</span></div></div>`;
+    }
+    if (ef.pieges && ef.pieges.length) {
+      html += `<div class="exam-section-label">⚠️ Pièges à éviter</div><ul class="exam-pieges-list">`;
+      ef.pieges.forEach(p => { html += `<li>${p}</li>`; });
+      html += `</ul>`;
+    }
+    examBlock.innerHTML = html;
+    container.appendChild(examBlock);
+  }
+
   // ── Focus jurisprudence / auteur ───────────────────────
   if (chapter.focus) {
     const focusBlock = document.createElement('div');

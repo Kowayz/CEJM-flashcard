@@ -7,7 +7,8 @@ const GRIDS = {
   "droit-c1":"grid-droit-c1","droit-c2":"grid-droit-c2","droit-c3":"grid-droit-c3",
   "droit-c4":"grid-droit-c4","droit-c5":"grid-droit-c5","droit-c6":"grid-droit-c6",
   "eco-c1":"grid-eco-c1","eco-c2":"grid-eco-c2","eco-c3":"grid-eco-c3",
-  "mgmt-c1":"grid-mgmt-c1","mgmt-c2":"grid-mgmt-c2"
+  "mgmt-c1":"grid-mgmt-c1","mgmt-c2":"grid-mgmt-c2",
+  "droit-c7":"grid-droit-c7"
 };
 const CAT_LABELS = {
   "droit-c1":"Droit C1 - Sources & Juridictions",
@@ -16,6 +17,7 @@ const CAT_LABELS = {
   "droit-c4":"Droit C4 - Concurrence",
   "droit-c5":"Droit C5 - Propriété intellectuelle",
   "droit-c6":"Droit C6 - Les sociétés",
+  "droit-c7":"Droit C7 - Contrat de travail",
   "eco-c1":"Éco C1 - Marché & Agents",
   "eco-c2":"Éco C2 - Rôle de l'État",
   "eco-c3":"Éco C3 - Facteurs de production",
@@ -71,6 +73,28 @@ const CHAPTERS = [
       ]}
     ],
     focus: { type: "jurisprudence", title: "Arrêt Blanco, 1873", subtitle: "Tribunal des conflits, 8 février 1873", content: "L'arrêt Blanco est l'arrêt fondateur du droit administratif français. Une fillette (Agnès Blanco) est renversée par un wagonnet d'une manufacture d'État à Bordeaux. Le Tribunal des conflits juge que la responsabilité de l'État ne peut être régie par le Code civil mais par des règles spéciales, et que la juridiction administrative est compétente. Cet arrêt consacre l'autonomie du droit administratif et justifie l'existence des deux ordres de juridiction.", tags: ["Dualisme juridictionnel", "Responsabilité de l'État", "Autonomie du droit administratif"] },
+    examFocus: {
+      pointsCles: [
+        "Pyramide de Kelsen : Constitution > Traités > Lois > Règlements > Actes individuels",
+        "Bloc de constitutionnalité : Constitution + DDHC 1789 + Préambule 1946 + Charte environnement 2004",
+        "Règlement UE = application directe (sans transposition) / Directive = obligation de résultat à transposer",
+        "Ordre judiciaire : TJ → Cour d'appel → Cour de cassation (ne rejuge PAS les faits)",
+        "1er degré = jugements / 2e et 3e degré = arrêts — distinction fondamentale",
+        "3 catégories d'infractions : contraventions (police) / délits (correctionnel) / crimes (assises avec jurés)",
+        "Conseil de prud'hommes : litiges individuels employeur/salarié, composition paritaire"
+      ],
+      rac: {
+        situation: "M. Dupont, technicien SIO en CDI, est licencié par son employeur. Il conteste la légitimité du licenciement. Devant quelle juridiction doit-il agir ?",
+        regle: "Le Conseil de prud'hommes est compétent pour tous les litiges individuels entre employeurs et salariés (art. L.1411-1 Code du travail). Il appartient à l'ordre judiciaire.",
+        application: "M. Dupont est salarié en litige individuel avec son employeur à propos d'un licenciement.",
+        conclusion: "M. Dupont doit saisir le Conseil de prud'hommes du lieu de son établissement. En cas d'appel, l'affaire irait devant la Cour d'appel chambre sociale, puis éventuellement la Cour de cassation."
+      },
+      pieges: [
+        "Cour de cassation ≠ CEDH (Cour européenne des droits de l'Homme) — deux institutions totalement distinctes",
+        "La jurisprudence n'est pas une source officielle en France — mais elle a une forte autorité de fait",
+        "Une directive européenne ne s'applique PAS directement sans transposition (≠ règlement qui s'applique directement)"
+      ]
+    },
     schema: { title: "La Pyramide de Kelsen", svg: `<svg viewBox="0 0 400 260" xmlns="http://www.w3.org/2000/svg" style="font-family:sans-serif;max-width:360px;display:block;margin:0 auto;"><polygon points="200,10 260,70 140,70" fill="rgba(99,102,241,0.3)" stroke="#6366f1" stroke-width="1.5"/><text x="200" y="50" text-anchor="middle" font-size="9" fill="#a5b4fc" font-weight="700">Constitution</text><polygon points="140,75 260,75 285,115 115,115" fill="rgba(99,102,241,0.22)" stroke="#6366f1" stroke-width="1.5"/><text x="200" y="100" text-anchor="middle" font-size="9" fill="#a5b4fc">Traités internationaux</text><polygon points="115,120 285,120 315,165 85,165" fill="rgba(99,102,241,0.15)" stroke="#6366f1" stroke-width="1.5"/><text x="200" y="148" text-anchor="middle" font-size="9" fill="#a5b4fc">Lois ordinaires</text><polygon points="85,170 315,170 345,215 55,215" fill="rgba(99,102,241,0.09)" stroke="#6366f1" stroke-width="1.5"/><text x="200" y="198" text-anchor="middle" font-size="9" fill="#818cf8">Règlements (décrets, arrêtés)</text><polygon points="55,220 345,220 370,255 30,255" fill="rgba(99,102,241,0.05)" stroke="#6366f1" stroke-width="1.5"/><text x="200" y="242" text-anchor="middle" font-size="9" fill="#64748b">Contrats et actes individuels</text></svg>` }
   },
   {
@@ -108,7 +132,29 @@ const CHAPTERS = [
         { title: "A. Nullité relative vs absolue", text: "La nullité relative (art. 1181) protège un intérêt privé : seule la partie protégée peut l'invoquer (délai 5 ans). La nullité absolue (art. 1179) protège l'intérêt général : tout intéressé peut l'invoquer (délai 5 ans). La forclusion est la perte définitive du droit d'agir pour non-respect du délai légal. La nullité anéantit le contrat rétroactivement.", keyPoints: ["Nullité relative = protection d'un intérêt privé", "Nullité absolue = protection de l'intérêt général", "Forclusion = perte du droit d'agir après expiration du délai"] }
       ]}
     ],
-    focus: { type: "jurisprudence", title: "Le dol par réticence", subtitle: "Cass. com., art. 1137 C.civ.", content: "Constitue un dol la dissimulation intentionnelle par l'un des contractants d'une information dont il sait le caractère déterminant pour l'autre partie (art. 1137 al. 2). Toutefois, ne constitue pas un dol le fait pour une partie de ne pas révéler à son cocontractant son estimation de la valeur de la prestation. Cette distinction entre information déterminante et évaluation est fondamentale en droit des contrats.", tags: ["Vice du consentement", "Dol par réticence", "Information déterminante"] }
+    focus: { type: "jurisprudence", title: "Le dol par réticence", subtitle: "Cass. com., art. 1137 C.civ.", content: "Constitue un dol la dissimulation intentionnelle par l'un des contractants d'une information dont il sait le caractère déterminant pour l'autre partie (art. 1137 al. 2). Toutefois, ne constitue pas un dol le fait pour une partie de ne pas révéler à son cocontractant son estimation de la valeur de la prestation. Cette distinction entre information déterminante et évaluation est fondamentale en droit des contrats.", tags: ["Vice du consentement", "Dol par réticence", "Information déterminante"] },
+    examFocus: {
+      pointsCles: [
+        "3 conditions de validité : consentement libre et éclairé + capacité juridique + objet licite et certain",
+        "Erreur : fausse représentation, doit être déterminante ET excusable (erreur sur la valeur = jamais un vice)",
+        "Dol : manœuvres, mensonges ou dissimulation intentionnelle d'une information déterminante (art. 1137)",
+        "Violence : contrainte physique ou morale, inclut l'abus de dépendance économique",
+        "Nullité relative : protège un intérêt privé, seule la partie protégée peut agir (5 ans)",
+        "Nullité absolue : protège l'intérêt général, tout intéressé peut agir (5 ans)",
+        "Forclusion = perte définitive du droit d'agir après expiration du délai légal"
+      ],
+      rac: {
+        situation: "Un vendeur de matériel informatique cache intentionnellement à son client professionnel que l'équipement vendu est en fin de support constructeur. Le client l'apprend après la livraison. Quelle action peut-il engager ?",
+        regle: "Le dol est le fait d'obtenir le consentement par des manœuvres, mensonges ou la dissimulation intentionnelle d'une information déterminante (art. 1137 C.civ.). Il entraîne la nullité relative du contrat.",
+        application: "Le vendeur a délibérément caché une information déterminante pour le consentement du client (fin de support = dépréciation immédiate). Il s'agit d'un dol par réticence.",
+        conclusion: "Le client peut demander la nullité relative du contrat pour dol et réclamer des dommages-intérêts. Le vendeur ne peut invoquer l'ignorance puisque la dissimulation est intentionnelle."
+      },
+      pieges: [
+        "Erreur sur la valeur ≠ vice du consentement — se tromper sur le prix n'annule PAS le contrat",
+        "Nullité relative ≠ nullité absolue : confondre l'intérêt protégé et qui peut agir est une erreur classique",
+        "La nullité anéantit le contrat RÉTROACTIVEMENT → restitutions mutuelles (tout se remet en état)"
+      ]
+    }
   },
   {
     id: "droit-c3", title: "Droit C3", subtitle: "Effets du contrat et inexécution",
@@ -156,7 +202,29 @@ const CHAPTERS = [
         { title: "A. Les grandes classifications", text: "Le droit distingue les contrats selon leur structure et leurs effets. Synallagmatique (obligations réciproques, ex : vente — le vendeur livre, l'acheteur paie) vs unilatéral (une seule partie s'oblige, ex : cautionnement). Onéreux (contrepartie réciproque, ex : contrat de transport) vs gratuit (avantage sans contrepartie, ex : donation). Commutatif (équivalence certaine des prestations dès la conclusion, ex : contrat de travail) vs aléatoire (équivalence dépend d'un événement incertain, ex : assurance, vente en viager).\n\nGré à gré (clauses librement négociées, ex : vente immobilière) vs adhésion (conditions non négociables fixées par l'une des parties, ex : abonnement téléphonique). Consensuel (accord suffit, ex : vente de meuble) vs solennel (formalité obligatoire, ex : mariage, donation immobilière devant notaire) vs réel (formation par la remise d'une chose, ex : contrat de dépôt). Contrat cadre (fixe les règles générales de la relation, ex : franchise) suivi de contrats d'application. Intuitu personae : conclus en considération de la personne (ex : contrat de travail, mandat d'avocat) — l'erreur sur la personne est une cause de nullité.", keyPoints: ["Contrat de travail = synallagmatique, onéreux, commutatif, intuitu personae, à exécution successive", "Contrat d'assurance = aléatoire (prestation dépend d'un sinistre éventuel). Contrat de dépôt = réel", "Contrat d'adhésion : conditions non négociables — attention aux clauses abusives réputées non écrites"] }
       ]}
     ],
-    focus: { type: "jurisprudence", title: "Arrêt Chronopost", subtitle: "Cass. com., 22 octobre 1996 — n° 93-18.632", content: "La société Banchereau avait confié à Chronopost des plis contenant une soumission à une adjudication, avec engagement de livraison le lendemain avant midi. Les plis n'ayant pas été livrés à temps, Banchereau demande réparation. Chronopost invoque une clause limitant l'indemnisation au montant du prix du transport. La Cour de cassation juge que cette clause limitative de responsabilité devait être réputée non écrite : en tant que spécialiste du transport rapide, Chronopost avait pris une obligation essentielle (la livraison garantie dans les délais) — une clause qui vide cette obligation de sa substance contredit la portée de l'engagement et ne peut être opposée. Principe fondamental : une clause qui annihile l'obligation essentielle du contrat est réputée non écrite (art. 1170 C.civ.).", tags: ["Clause limitative de responsabilité", "Obligation essentielle", "Réputée non écrite", "Art. 1170 C.civ."] }
+    focus: { type: "jurisprudence", title: "Arrêt Chronopost", subtitle: "Cass. com., 22 octobre 1996 — n° 93-18.632", content: "La société Banchereau avait confié à Chronopost des plis contenant une soumission à une adjudication, avec engagement de livraison le lendemain avant midi. Les plis n'ayant pas été livrés à temps, Banchereau demande réparation. Chronopost invoque une clause limitant l'indemnisation au montant du prix du transport. La Cour de cassation juge que cette clause limitative de responsabilité devait être réputée non écrite : en tant que spécialiste du transport rapide, Chronopost avait pris une obligation essentielle (la livraison garantie dans les délais) — une clause qui vide cette obligation de sa substance contredit la portée de l'engagement et ne peut être opposée. Principe fondamental : une clause qui annihile l'obligation essentielle du contrat est réputée non écrite (art. 1170 C.civ.).", tags: ["Clause limitative de responsabilité", "Obligation essentielle", "Réputée non écrite", "Art. 1170 C.civ."] },
+    examFocus: {
+      pointsCles: [
+        "Art. 1217 C.civ. : 5 remèdes cumulables à l'inexécution (exception / exécution forcée / réduction prix / résolution / DI)",
+        "Résolution = anéantissement RÉTROACTIF du contrat / Résiliation = rupture pour l'AVENIR seulement",
+        "Obligation de moyens : le créancier prouve la faute / Obligation de résultat : la faute est présumée si résultat non atteint",
+        "Mise en demeure = préalable généralement obligatoire avant toute action en inexécution",
+        "Clause pénale : le juge peut la modérer si manifestement excessive ou dérisoire",
+        "Clause limitative réputée non écrite si elle vide l'obligation essentielle de sa substance (Chronopost)",
+        "Contrat synallagmatique : obligations réciproques (vente) / unilatéral : une seule partie s'oblige (donation)"
+      ],
+      rac: {
+        situation: "Une ESN devait livrer un logiciel de gestion à un client sous 4 mois. 6 mois après, rien n'est livré. Le client a déjà versé 50 % du prix. Que peut-il faire ?",
+        regle: "En cas d'inexécution contractuelle, l'art. 1217 C.civ. ouvre au créancier plusieurs remèdes cumulables : exception d'inexécution, exécution forcée, résolution du contrat et/ou dommages-intérêts. Une mise en demeure préalable est généralement requise.",
+        application: "L'ESN n'a pas respecté son obligation de livraison dans les délais. Après mise en demeure restée sans effet, le client peut mettre en œuvre les remèdes.",
+        conclusion: "Le client peut demander la résolution du contrat (restitution des 50 % versés) et des dommages-intérêts compensatoires pour le préjudice subi (retard, manque à gagner)."
+      },
+      pieges: [
+        "Résolution ≠ résiliation : confusion très classique aux partiels — vérifier si effet rétroactif ou pas",
+        "Obligation de moyens ≠ obligation de résultat : le critère est l'aléa inhérent à la prestation (médecin = moyens, transporteur = résultat)",
+        "La clause pénale n'est pas intangible : le juge PEUT la modifier si manifestement disproportionnée"
+      ]
+    }
   },
   {
     id: "droit-c4", title: "Droit C4", subtitle: "Droit de la concurrence",
@@ -192,7 +260,29 @@ const CHAPTERS = [
         { title: "A. Les pratiques restrictives", text: "Le déséquilibre significatif (art. L.442-1 Code de commerce) vise les situations où une entreprise impose des obligations créant un déséquilibre excessif dans la relation contractuelle (asymétrie de pouvoir économique). La rupture brutale sanctionne la cessation soudaine d'une relation commerciale établie sans préavis suffisant. Les concentrations (fusions, acquisitions) sont soumises à un contrôle préalable au-delà de certains seuils.", keyPoints: ["Déséquilibre significatif : souvent entre grande distribution et fournisseurs", "Délai de préavis rupture = proportionnel à la durée de la relation", "Contrôle des concentrations : seuils de CA déclenchant l'obligation de notification"] }
       ]}
     ],
-    focus: { type: "jurisprudence", title: "Google Shopping — Commission européenne, 2017", subtitle: "Amende record : 2,42 milliards €", content: "La Commission européenne a condamné Google pour abus de position dominante : en favorisant son propre service de comparaison de prix (Google Shopping) dans ses résultats de recherche, Google a écarté ses concurrents. Cette décision illustre l'application du droit de la concurrence aux plateformes numériques et a ouvert la voie au Digital Markets Act (DMA, 2022) qui impose des obligations spécifiques aux grandes plateformes ('gatekeepers').", tags: ["Abus de position dominante", "Marché numérique", "DMA", "Algorithme"] }
+    focus: { type: "jurisprudence", title: "Google Shopping — Commission européenne, 2017", subtitle: "Amende record : 2,42 milliards €", content: "La Commission européenne a condamné Google pour abus de position dominante : en favorisant son propre service de comparaison de prix (Google Shopping) dans ses résultats de recherche, Google a écarté ses concurrents. Cette décision illustre l'application du droit de la concurrence aux plateformes numériques et a ouvert la voie au Digital Markets Act (DMA, 2022) qui impose des obligations spécifiques aux grandes plateformes ('gatekeepers').", tags: ["Abus de position dominante", "Marché numérique", "DMA", "Algorithme"] },
+    examFocus: {
+      pointsCles: [
+        "Entente : concertation entre concurrents pour fixer les prix ou partager les marchés → interdite (art. L.420-1)",
+        "Abus de position dominante : 3 conditions cumulatives (position + exploitation abusive + effet restrictif)",
+        "Position dominante seule n'est PAS interdite — c'est l'ABUS qui est sanctionné",
+        "Procédure de clémence : dénoncer une entente = réduction ou exénération de sanction",
+        "Concurrence déloyale : 4 formes (dénigrement / imitation / désorganisation / parasitisme), fondement : art. 1240 C.civ.",
+        "Déséquilibre significatif : impose des obligations créant un déséquilibre excessif entre partenaires",
+        "Sanction : jusqu'à 10 % du CA mondial + nullité des accords anticoncurrentiels"
+      ],
+      rac: {
+        situation: "Deux fournisseurs de logiciels de cybersécurité se contactent pour aligner leurs tarifs et refuser des clients en commun. Est-ce légal ? Quelles sanctions ?",
+        regle: "Les ententes entre entreprises concurrentes portant sur les prix sont interdites par l'art. L.420-1 du Code de commerce et l'art. 101 TFUE. L'Autorité de la concurrence peut sanctionner jusqu'à 10 % du CA mondial.",
+        application: "Les deux fournisseurs, concurrents directs, coordonnent leurs prix et pratiques commerciales : c'est une entente horizontale sur les prix, la plus grave catégorie.",
+        conclusion: "Cette pratique est illégale. Les entreprises s'exposent à des amendes jusqu'à 10 % de leur CA mondial et à la nullité des accords. La procédure de clémence pourrait profiter à celle qui dénonce en premier."
+      },
+      pieges: [
+        "Position dominante ≠ illicite : c'est son ABUS qui est interdit (Google n'est pas illégal d'être dominant)",
+        "Entente ≠ concurrence déloyale : bases légales différentes (droit de la concurrence vs responsabilité civile)",
+        "Parasitisme ≠ imitation : le parasitisme ne nécessite pas de confusion avec un concurrent identifiable"
+      ]
+    }
   },
   {
     id: "droit-c5", title: "Droit C5", subtitle: "La propriété intellectuelle",
@@ -217,7 +307,28 @@ const CHAPTERS = [
         { title: "A. Le droit d'auteur", text: "Le droit d'auteur protège automatiquement toute œuvre de l'esprit originale dès sa création, sans formalité de dépôt. Il comprend des droits patrimoniaux (exploitation économique, durée 70 ans post-mortem) et des droits moraux (incessibles, perpétuels). En France, la SACEM gère les droits musicaux.", keyPoints: ["Protection automatique dès la création : pas de dépôt obligatoire", "Droits patrimoniaux : 70 ans après la mort de l'auteur", "Droits moraux : incessibles et perpétuels (droit à la paternité, à l'intégrité)"] }
       ]}
     ],
-    focus: { type: "jurisprudence", title: "Affaire Louboutin vs Van Haren (CJUE, 2018)", subtitle: "Protection d'une couleur comme marque", content: "La Cour de justice de l'UE a reconnu que la semelle rouge caractéristique de Christian Louboutin pouvait être protégée comme marque, à condition que la couleur soit appliquée à une partie spécifique du produit. Cette décision illustre l'élargissement des signes protégeables comme marques au-delà des logos traditionnels.", tags: ["Droit des marques", "Signe distinctif", "Couleur", "CJUE"] }
+    focus: { type: "jurisprudence", title: "Affaire Louboutin vs Van Haren (CJUE, 2018)", subtitle: "Protection d'une couleur comme marque", content: "La Cour de justice de l'UE a reconnu que la semelle rouge caractéristique de Christian Louboutin pouvait être protégée comme marque, à condition que la couleur soit appliquée à une partie spécifique du produit. Cette décision illustre l'élargissement des signes protégeables comme marques au-delà des logos traditionnels.", tags: ["Droit des marques", "Signe distinctif", "Couleur", "CJUE"] },
+    examFocus: {
+      pointsCles: [
+        "Marque : dépôt INPI obligatoire pour la protection, durée 10 ans renouvelable indéfiniment",
+        "Brevet : 3 conditions (nouveauté + activité inventive + application industrielle), 20 ans non renouvelable",
+        "Droit d'auteur : protection AUTOMATIQUE dès la création, sans dépôt, durée 70 ans post-mortem",
+        "Logiciel = œuvre de l'esprit protégée par le droit d'auteur (art. L.111-1 CPI) — pas par le brevet",
+        "Salarié crée un logiciel dans ses fonctions → droits patrimoniaux à l'employeur (art. L.113-9 CPI)",
+        "Droits moraux : inalinéables et perpétuels (droit à la paternité, à l'intégrité de l'œuvre)"
+      ],
+      rac: {
+        situation: "Lucas, développeur salarié dans une ESN, crée un logiciel de gestion de tickets dans le cadre de sa mission. Peut-il interdire à son employeur de le commercialiser ?",
+        regle: "Selon l'art. L.113-9 CPI, les droits patrimoniaux sur les logiciels créés par un salarié dans l'exercice de ses fonctions sont automati-quement dévolus à l'employeur. Les droits moraux restent attachés à l'auteur salarié.",
+        application: "Lucas a créé le logiciel dans le cadre de ses missions professionnelles pour son employeur ESN : c'est l'art. L.113-9 qui s'applique.",
+        conclusion: "L'ESN détient les droits patrimoniaux (vente, exploitation). Lucas conserve ses droits moraux (revendiquer la paternité) mais ne peut pas s'opposer à la commercialisation par son employeur."
+      },
+      pieges: [
+        "Marque ≠ brevet ≠ droit d'auteur : durées de protection et conditions d'obtention totalement différentes",
+        "Le brevet ne protège PAS un logiciel en tant que tel en droit français — le logiciel = droit d'auteur",
+        "Droits moraux ≠ droits patrimoniaux : les moraux sont inalinéables (ne peuvent pas être vendus), les patrimoniaux peuvent être cédés"
+      ]
+    }
   },
   {
     id: "droit-c6", title: "Droit C6", subtitle: "Les sociétés",
@@ -250,7 +361,101 @@ const CHAPTERS = [
         { title: "A. La séparation des patrimoines", text: "En droit français, l'entrepreneur individuel bénéficie désormais d'une protection automatique : son patrimoine personnel est séparé de son patrimoine professionnel (loi du 14 février 2022). La constitution en société reste néanmoins la protection la plus solide car la personnalité morale crée un patrimoine distinct. Le régime matrimonial (ex : communauté réduite aux acquêts) peut également impacter la protection.", keyPoints: ["EI : séparation automatique patrimoine pro / perso depuis 2022", "Société = bouclier contre les créanciers professionnels", "Régime matrimonial : impact sur les biens du conjoint"] }
       ]}
     ],
-    focus: { type: "jurisprudence", title: "Responsabilité du dirigeant (Cass. com.)", subtitle: "Faute séparable des fonctions", content: "La jurisprudence distingue les actes accomplis dans l'exercice des fonctions de direction (responsabilité de la société) et les fautes personnelles séparables des fonctions (responsabilité personnelle du dirigeant). Un dirigeant peut ainsi voir sa responsabilité personnelle engagée si sa faute est intentionnelle, d'une particulière gravité et incompatible avec l'exercice normal de ses fonctions.", tags: ["Responsabilité du dirigeant", "Faute séparable", "Personnalité morale"] }
+    focus: { type: "jurisprudence", title: "Responsabilité du dirigeant (Cass. com.)", subtitle: "Faute séparable des fonctions", content: "La jurisprudence distingue les actes accomplis dans l'exercice des fonctions de direction (responsabilité de la société) et les fautes personnelles séparables des fonctions (responsabilité personnelle du dirigeant). Un dirigeant peut ainsi voir sa responsabilité personnelle engagée si sa faute est intentionnelle, d'une particulière gravité et incompatible avec l'exercice normal de ses fonctions.", tags: ["Responsabilité du dirigeant", "Faute séparable", "Personnalité morale"] },
+    examFocus: {
+      pointsCles: [
+        "3 éléments constitutifs d'une société : apports + participation aux résultats + affectio societatis",
+        "Personnalité morale acquise à l'immatriculation au RCS → protection du patrimoine personnel",
+        "SAS/SASU : liberté statutaire totale, 1€ capital min, la forme la plus créée en France depuis 2020",
+        "SARL/EURL : 1 à 100 associés, 1€ capital min, gérant, forme PME dominante",
+        "SA : ≥7 actionnaires, 37 000€ min, PDG + Conseil d'administration (structure complexe)",
+        "SNC : responsabilité INDÉFINIE et SOLIDAIRE des associés — très rare en pratique",
+        "EI (loi 2022) : séparation automatique patrimoine pro/perso sans formalité, mais pas de personnalité morale"
+      ],
+      rac: {
+        situation: "Trois étudiants BTS SIO veulent créer une start-up de cybersécurité. Ils hésitent entre SARL et SAS. Quel conseil leur donner ?",
+        regle: "La SARL repose sur un intuitu personae fort (max 100 associés, cession de parts encadrée). La SAS offre une liberté statutaire totale (organisation sur mesure, cession d'actions plus souple). Toutes deux limitent la responsabilité aux apports.",
+        application: "Trois associés, projet innovant avec possibles levées de fonds futures : la liberté statutaire et la facilité d'entrée d'investisseurs sont des critères clés.",
+        conclusion: "La SAS est recommandée : liberté d'organisation, image moderne, actions plus faciles à céder à des investisseurs futurs. La SARL conviendrait mieux à une activité stable sans investisseurs extérieurs."
+      },
+      pieges: [
+        "Capital de 1€ minimum ≠ conseil de mettre 1€ : sous-capitalisation = risque de faute de gestion du dirigeant",
+        "EI avec séparation automatique (loi 2022) ≠ société : l'EI n'a PAS la personnalité morale",
+        "Apport en industrie (travail, compétences) : ne concourt PAS au capital social"
+      ]
+    }
+  },
+  {
+    id: "droit-c7", title: "Droit C7", subtitle: "Le contrat de travail",
+    subject: "droit", color: "#a3e635", icon: "👔",
+    intro: "Le contrat de travail est au cœur de la relation employeur/salarié. Ce chapitre couvre sa formation, les types de contrats (CDI, CDD, CTT), les obligations des parties, la modification/suspension, et les différents modes de rupture.",
+    plan: [
+      { title: "I. La formation du contrat de travail", children: [
+        { title: "A. Définition et critères" },
+        { title: "B. Les types : CDI, CDD, CTT" }
+      ]},
+      { title: "II. L'exécution du contrat", children: [
+        { title: "A. Obligations de l'employeur" },
+        { title: "B. Obligations du salarié" },
+        { title: "C. Modification et suspension" }
+      ]},
+      { title: "III. La rupture du contrat", children: [
+        { title: "A. La démission" },
+        { title: "B. Le licenciement (personnel et économique)" },
+        { title: "C. La rupture conventionnelle" }
+      ]}
+    ],
+    content: [
+      { sectionTitle: "I. La formation du contrat de travail", subsections: [
+        { title: "A. Définition et critères", text: "Le contrat de travail est une convention par laquelle une personne (le salarié) s'engage à travailler sous la direction d'une autre (l'employeur) moyennant rémunération.\n\nTrois critères cumulatifs le caractérisent :\n• Une prestation de travail\n• Une rémunération\n• Un lien de subordination juridique : l'employeur donne des ordres, contrôle le travail et peut sanctionner. C'est le critère clé qui distingue le salarié du travailleur indépendant.", callouts: [
+          { type: 'example', icon: '📌', label: 'Requalification — Affaire Deliveroo (2020)', text: 'La Cour de cassation a requalifié la relation d\'un livreur indépendant en contrat de travail : la plateforme fixait les tarifs, gérait les notes et pouvait désactiver le compte → lien de subordination caractérisé.' },
+          { type: 'warning', icon: '⚠️', label: 'Salarié ≠ indépendant ≠ stagiaire', text: 'Un auto-entrepreneur choisit librement ses horaires et clients = pas de lien de subordination. Un stagiaire n\'est pas salarié (convention de stage ≠ contrat de travail).' }
+        ], keyPoints: ["3 critères : prestation de travail + rémunération + lien de subordination", "Lien de subordination = critère discriminant vis-à-vis du travail indépendant", "Le juge peut requalifier une relation commerciale en contrat de travail"] },
+        { title: "B. Les types de contrats", text: "Le CDI (Contrat à Durée Indéterminée) est la forme normale et générale de la relation de travail. Pas de terme fixé, peut être oral à temps plein. La période d'essai permet à chacun de tester la relation.\n\nLe CDD (Contrat à Durée Déterminée) n'est autorisé que dans des cas précis : remplacement d'un absent, accroissement temporaire d'activité, emploi saisonnier. Toujours écrit. Durée max : 18 mois. À son terme, le salarié touche une indemnité de fin de contrat de 10 % de la rémunération brute totale perçue.\n\nLe CTT (intérim) fait intervenir 3 parties : l'Entreprise de Travail Temporaire (ETT = employeur légal), l'entreprise utilisatrice, et l'intérimaire. Mêmes motifs de recours que le CDD.", callouts: [
+          { type: 'warning', icon: '⚠️', label: 'CDD hors cas légaux = requalification en CDI', text: 'Si un CDD est conclu sans motif légal, ou si sa durée est dépassée, le salarié peut saisir le Conseil de prud\'hommes pour requalification en CDI + indemnité de requalification.' },
+          { type: 'def', icon: '📖', label: 'Période d\'essai', text: 'Période initiale pendant laquelle chaque partie peut rompre librement le contrat. Durée légale : 2 mois (ouvriers), 3 mois (techniciens/agents de maîtrise), 4 mois (cadres). Renouvelable une fois si accord de branche le prévoit.' }
+        ], keyPoints: ["CDI : contrat de droit commun, forme normale d'emploi", "CDD : recours limité aux cas légaux, max 18 mois, indemnité fin de contrat 10 %", "CTT : ETT = employeur légal / entreprise utilisatrice dirige le travail"] }
+      ]},
+      { sectionTitle: "II. L'exécution du contrat de travail", subsections: [
+        { title: "A. Obligations de l'employeur", text: "L'employeur est soumis à quatre grandes obligations :\n\n1. Fournir le travail convenu et les moyens nécessaires (matériel, accès aux systèmes informatiques pour un technicien SIO).\n\n2. Payer le salaire. Le salaire ne peut être inférieur au SMIC (revalorisé chaque année). Le bulletin de salaire est obligatoire et doit mentionner salaire brut, cotisations et salaire net.\n\n3. Assurer la sécurité et protéger la santé (art. L.4121-1 Code du travail). C'est une obligation de résultat renforcée : en cas d'accident du travail, l'employeur peut être condamné pour faute inexcusable.\n\n4. Former les salariés : plan de développement des compétences, alimentation du CPF (Compte Personnel de Formation).", keyPoints: ["Salaire ≥ SMIC, bulletin de paie obligatoire", "Sécurité : obligation de résultat — faute inexcusable possible en cas d'accident", "Formation : CPF + plan de développement des compétences"] },
+        { title: "B. Obligations du salarié", text: "Le salarié doit :\n\n1. Exécuter son travail avec soin et consciencieusement, en respectant les instructions de l'employeur (lien de subordination).\n\n2. Respecter le règlement intérieur et les procédures de l'entreprise.\n\n3. Obligation de loyauté : ne pas nuire aux intérêts de l'entreprise, ne pas divulguer d'informations confidentielles (secret des affaires).\n\n4. Obligation de non-concurrence (si clause dans le contrat) : ne pas exercer d'activité concurrente pendant ou après le contrat, si une clause de non-concurrence valide est prévue (elle doit être limitée dans le temps, l'espace et comporter une contrepartie financière).", callouts: [
+          { type: 'example', icon: '📌', label: 'Clause de non-concurrence en BTS SIO', text: 'Un technicien réseau quitte une ESN (Entreprise de Services du Numérique). Si son contrat comporte une clause de non-concurrence, il ne peut pas rejoindre une entreprise concurrente dans la même zone géographique pendant la durée prévue. En contrepartie, l\'employeur doit lui verser une compensation financière mensuelle.' }
+        ], keyPoints: ["Exécuter le travail selon les instructions (lien de subordination)", "Obligation de loyauté : confidentialité, interdiction de nuire à l'employeur", "Clause de non-concurrence : limitée (temps + espace) + contrepartie financière obligatoire"] },
+        { title: "C. Modification et suspension du contrat", text: "La modification du contrat : toute modification d'un élément essentiel (salaire, qualification, lieu de travail hors secteur géographique) nécessite l'accord du salarié. Le salarié peut refuser. En revanche, l'employeur peut modifier seul les conditions de travail (horaires, organisation interne) sans accord du salarié.\n\nLa suspension du contrat : le contrat est temporairement inexécuté mais n'est pas rompu. Principales causes :\n• Maladie ou accident non professionnel : arrêt maladie, maintien partiel du salaire selon convention collective\n• Accident du travail / maladie professionnelle : protection renforcée, indemnisation par la CPAM\n• Congé maternité/paternité : durée légale, salaire maintenu par la Sécurité sociale\n• Grève : suspension légale du contrat, pas de salaire mais pas de licenciement possible pour ce seul motif", keyPoints: ["Modification élément essentiel = accord du salarié obligatoire", "Modification conditions de travail = pouvoir unilatéral de l'employeur", "Suspension ≠ rupture : le contrat reprend après la cause de suspension"] }
+      ]},
+      { sectionTitle: "III. La rupture du contrat de travail", subsections: [
+        { title: "A. La démission", text: "La démission est la rupture du contrat à l'initiative du salarié. Elle doit être claire et non équivoque (écrite conseillée). Le salarié doit respecter un préavis (délai pendant lequel il continue à travailler avant de quitter l'entreprise), dont la durée est fixée par la loi ou la convention collective.\n\nEn cas de démission, le salarié ne bénéficie pas en principe de l'allocation chômage (ARE), sauf démission légitime (ex : suivi du conjoint muté, non-paiement du salaire par l'employeur).", keyPoints: ["Démission : initiative du salarié, doit être non équivoque", "Préavis obligatoire (sauf dispense de l'employeur)", "Pas d'allocation chômage sauf démission légitime"] },
+        { title: "B. Le licenciement", text: "Le licenciement est la rupture du contrat à l'initiative de l'employeur. Il doit reposer sur une cause réelle et sérieuse.\n\nLe licenciement pour motif personnel est fondé sur le comportement ou les aptitudes du salarié : faute simple, faute grave (pas de préavis ni d'indemnités de licenciement), faute lourde (intention de nuire), ou insuffisance professionnelle.\n\nLe licenciement pour motif économique est fondé sur des raisons économiques extérieures au salarié : difficultés économiques, mutations technologiques, réorganisation nécessaire à la sauvegarde de la compétitivité. L'employeur doit d'abord chercher à reclasser le salarié.\n\nProcédure obligatoire : convocation à entretien préalable (lettre RAR) → entretien préalable (délai min. 5 jours ouvrables) → notification par lettre RAR. Tout licenciement sans cause réelle et sérieuse expose l'employeur à des indemnités devant le Conseil de prud'hommes.", callouts: [
+          { type: 'warning', icon: '⚠️', label: 'Faute grave vs faute lourde', text: 'Faute grave : faits rendant impossible le maintien dans l\'entreprise (ex : insultes, vol). Pas de préavis ni d\'indemnité de licenciement. Faute lourde : intention de nuire à l\'entreprise (ex : sabotage). Aucune indemnité, et la responsabilité personnelle du salarié peut être engagée.' },
+          { type: 'example', icon: '📌', label: 'Licenciement économique en ESN', text: 'Une ESN perd un gros contrat. Elle supprime 3 postes de techniciens SIO. C\'est un licenciement économique : l\'employeur doit proposer un reclassement interne, respecter l\'ordre des licenciements (ancienneté, charges familiales) et verser une indemnité légale de licenciement.' }
+        ], keyPoints: ["Licenciement personnel : faute (simple/grave/lourde) ou insuffisance professionnelle", "Licenciement économique : cause extérieure au salarié, obligation de reclassement préalable", "Procédure : convocation → entretien (≥5j) → notification. Toute irrégularité = indemnité"] },
+        { title: "C. La rupture conventionnelle", text: "La rupture conventionnelle (art. L.1237-11 Code du travail) est un mode de rupture amiable du CDI : l'employeur et le salarié s'accordent ensemble sur les conditions de la rupture. Ni démission, ni licenciement.\n\nProcédure : un ou plusieurs entretiens → signature d'une convention homologuée par la DREETS (ancienne DIRECCTE) → délai de rétractation de 15 jours calendaires → homologation sous 15 jours → rupture effective.\n\nLe salarié perçoit une indemnité spécifique de rupture conventionnelle (au moins égale à l'indemnité légale de licenciement) et peut prétendre aux allocations chômage (ARE).\n\nIl n'existe pas de rupture conventionnelle pour les CDD.", callouts: [
+          { type: 'def', icon: '📖', label: 'Avantages pour les deux parties', text: 'Pour le salarié : indemnité + droit au chômage. Pour l\'employeur : évite un contentieux aux prud\'hommes, rupture rapide et sécurisée. C\'est la forme de rupture la plus utilisée en France (500 000+ par an).' }
+        ], keyPoints: ["Rupture conventionnelle : accord mutuel CDI uniquement", "Délai de rétractation : 15 jours calendaires après signature", "Salarié : indemnité ≥ indemnité légale de licenciement + droit à l'ARE (chômage)"] }
+      ]}
+    ],
+    focus: { type: "jurisprudence", title: "Cass. soc., 2 juillet 2014 — Affaire Mady", subtitle: "Modification du contrat vs changement des conditions de travail", content: "La Cour de cassation rappelle la distinction fondamentale : la modification d'un élément essentiel du contrat (qualification, rémunération, lieu de travail hors secteur géographique) nécessite l'accord exprès du salarié. En revanche, le changement des conditions de travail (horaires, organisation interne) relève du pouvoir de direction unilatéral de l'employeur. Un salarié qui refuse une simple modification des conditions de travail peut être licencié pour cause réelle et sérieuse.", tags: ["Modification du contrat", "Pouvoir de direction", "Lien de subordination"] },
+    examFocus: {
+      pointsCles: [
+        "3 critères du contrat de travail : prestation + rémunération + LIEN DE SUBORDINATION (ordres, contrôle, sanctions)",
+        "CDI = forme normale / CDD = cas légaux limitatifs (max 18 mois) + ind. fin contrat 10 % / CTT = 3 parties",
+        "Modification élément essentiel (salaire, qualification, lieu hors secteur) = accord du salarié OBLIGATOIRE",
+        "Licenciement personnel : procédure : convocation (RAR) → entretien (≥5j ouvrables) → notification (RAR)",
+        "Faute grave : pas de préavis ni d'indemnité de licenciement / Faute lourde : + responsabilité personnelle",
+        "Rupture conventionnelle : CDI uniquement, rétractation 15j, homologation DREETS, droit à l'ARE (chômage)"
+      ],
+      rac: {
+        situation: "Camille, technicienne réseau en CDI, est convoquée pour un entretien préalable : son employeur l'accuse d'avoir divulgué intentionnellement des informations confidentielles à un concurrent. Peut-il la licencier pour faute lourde ?",
+        regle: "La faute lourde suppose l'intention de nuire à l'entreprise. Elle prive le salarié du préavis, de l'indemnité de licenciement et peut engager sa responsabilité personnelle. Procédure obligatoire : convocation (RAR) → entretien (délai min. 5 jours ouvrables) → notification (RAR).",
+        application: "La divulgation intentionnelle d'informations confidentielles à un concurrent caractérise l'intention de nuire. La procédure légale doit être rigoureusement respectée.",
+        conclusion: "L'employeur peut licencier pour faute lourde si l'intention de nuire est établie. Camille perd tout droit au préavis et aux indemnités, et sa responsabilité civile personnelle peut être engagée pour les préjudices causés."
+      },
+      pieges: [
+        "Faute grave ≠ faute lourde : la faute lourde exige l'INTENTION DE NUIRE (critère supplémentaire)",
+        "Rupture conventionnelle uniquement pour les CDI — impossible pour un CDD ou un fonctionnaire",
+        "Suspension ≠ rupture : pendant un arrêt maladie le contrat est SUSPENDU, pas rompu (protection réduite mais existante)"
+      ]
+    }
   },
   {
     id: "eco-c1", title: "Éco C1", subtitle: "Le marché et les agents économiques",
@@ -295,6 +500,27 @@ const CHAPTERS = [
       ]}
     ],
     focus: { type: "auteur", title: "Adam Smith et la main invisible", subtitle: "La Richesse des Nations, 1776", content: "Adam Smith (1723-1790) est le père du libéralisme économique. Dans La Richesse des Nations, il théorise que chaque individu, en cherchant son intérêt personnel, est guidé comme par une 'main invisible' vers la promotion de l'intérêt général. Cette métaphore fonde la croyance en l'efficacité du marché libre et du système des prix. Toutefois, Smith reconnaissait déjà des limites : les marchés peuvent échouer (défaillances de marché) et l'État doit intervenir dans certains domaines régaliens.", tags: ["Libéralisme", "Main invisible", "Marché libre", "Intérêt général"] },
+    examFocus: {
+      pointsCles: [
+        "5 agents économiques (INSEE) : Ménages / SNF (entreprises) / SF (banques) / APU (État) / Reste du Monde",
+        "5 hypothèses CPP : atomicité + homogénéité + fluidité + transparence + mobilité des facteurs",
+        "CPP = modèle THÉORIQUE : aucun marché réel ne remplit parfaitement les 5 conditions",
+        "Défaillances du marché : externalités (+ et -) + asymétrie d'information + biens publics",
+        "Monnaie : 3 fonctions (unité de compte / intermédiaire des échanges / réserve de valeur)",
+        "Externalité négative → principe pollueur-payeur / Externalité positive → subvention publique"
+      ],
+      rac: {
+        situation: "Une usine chimique déverse des rejets dans une rivière, causant des dommages aux riverains. Le marché régule-t-il seul ce problème ? Quel mécanisme correctif l'État peut-il mettre en place ?",
+        regle: "Une externalité négative est un effet négatif de l'activité d'un agent sur des tiers non intégré dans le prix de marché. Elle constitue une défaillance du marché qui justifie l'intervention de l'État (principe pollueur-payeur).",
+        application: "La pollution de la rivière est une externalité négative : l'usine ne supporte pas le coût des dommages infligés aux tiers. Le marché seul ne corrige pas cette situation.",
+        conclusion: "L'État peut imposer une écotaxe (principe pollueur-payeur) ou des normes d'émission contraignantes pour internaliser le coût de la pollution dans les prix de l'usine."
+      },
+      pieges: [
+        "Marché financier secondaire (Bourse) ≠ marché primaire : en Bourse, les fonds N'ARRIVENT PAS à l'entreprise",
+        "CPP ≠ marché réel : c'est un modèle de référence théorique, jamais entièrement vérifié dans la réalité",
+        "Externalité positive ≠ bien public : un bien public est non rival ET non exclusif (ex : éclairage public)"
+      ]
+    },
     schema: { title: "Le Circuit Économique Simplifié", svg: `<svg viewBox="0 0 400 200" xmlns="http://www.w3.org/2000/svg" style="font-family:sans-serif;max-width:380px;display:block;margin:0 auto;"><rect x="20" y="70" width="110" height="60" rx="10" fill="rgba(99,102,241,0.15)" stroke="#6366f1" stroke-width="1.5"/><text x="75" y="97" text-anchor="middle" font-size="11" fill="#a5b4fc" font-weight="700">Entreprises</text><text x="75" y="113" text-anchor="middle" font-size="9" fill="#64748b">Production</text><rect x="270" y="70" width="110" height="60" rx="10" fill="rgba(52,211,153,0.15)" stroke="#34d399" stroke-width="1.5"/><text x="325" y="97" text-anchor="middle" font-size="11" fill="#86efac" font-weight="700">Ménages</text><text x="325" y="113" text-anchor="middle" font-size="9" fill="#64748b">Consommation</text><path d="M130,82 Q200,32 270,82" stroke="#6366f1" stroke-width="1.5" fill="none" marker-end="url(#a1)"/><text x="200" y="48" text-anchor="middle" font-size="9" fill="#818cf8">Biens &amp; services</text><path d="M270,118 Q200,168 130,118" stroke="#34d399" stroke-width="1.5" fill="none" marker-end="url(#a2)"/><text x="200" y="165" text-anchor="middle" font-size="9" fill="#34d399">Revenus (salaires)</text><defs><marker id="a1" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#6366f1"/></marker><marker id="a2" markerWidth="8" markerHeight="8" refX="6" refY="3" orient="auto"><path d="M0,0 L0,6 L8,3 z" fill="#34d399"/></marker></defs></svg>` }
   },
   {
@@ -329,7 +555,28 @@ const CHAPTERS = [
         { title: "A. Le carré magique de Kaldor", text: "Nicholas Kaldor propose un outil graphique représentant 4 objectifs économiques simultanés : croissance du PIB élevée, faible chômage (plein emploi), inflation maîtrisée (~2%), et équilibre de la balance des paiements. On parle de 'carré magique' car atteindre simultanément tous ces objectifs est extrêmement difficile. L'inflation est une hausse durable et généralisée des prix ; la déflation est une baisse auto-entretenue des prix (plus dangereuse car elle retarde les décisions d'achat).", keyPoints: ["Carré magique : 4 objectifs rarement tous atteints ensemble", "Inflation ~2% : objectif de la BCE pour la zone euro", "Déflation : spirale baisse des prix → baisse de la production → hausse du chômage"] }
       ]}
     ],
-    focus: { type: "auteur", title: "John Maynard Keynes et l'intervention de l'État", subtitle: "Théorie générale, 1936", content: "Keynes (1883-1946) est le père du keynésianisme. Face à la Grande Dépression de 1929, il théorise que l'État doit soutenir la demande globale en cas de récession ('relance par la demande'). Sa doctrine justifie le recours au déficit budgétaire comme outil de stabilisation économique. Elle s'oppose aux théories libérales classiques qui font confiance au marché pour s'auto-réguler.", tags: ["Keynésianisme", "Demande globale", "Relance", "Déficit budgétaire"] }
+    focus: { type: "auteur", title: "John Maynard Keynes et l'intervention de l'État", subtitle: "Théorie générale, 1936", content: "Keynes (1883-1946) est le père du keynésianisme. Face à la Grande Dépression de 1929, il théorise que l'État doit soutenir la demande globale en cas de récession ('relance par la demande'). Sa doctrine justifie le recours au déficit budgétaire comme outil de stabilisation économique. Elle s'oppose aux théories libérales classiques qui font confiance au marché pour s'auto-réguler.", tags: ["Keynésianisme", "Demande globale", "Relance", "Déficit budgétaire"] },
+    examFocus: {
+      pointsCles: [
+        "3 fonctions de Musgrave : allocation (biens publics) + redistribution (inégalités) + stabilisation (conjoncture)",
+        "Politique budgétaire = recettes et dépenses de l'État / Politique monétaire = BCE et taux directeurs",
+        "Politique de relance (Keynes) : ↑ dépenses publiques → ↑ demande → ↑ production (multiplicateur)",
+        "Déficit ≠ dette : déficit = solde ANNUEL / dette = accumulation de tous les déficits passés",
+        "Carré magique de Kaldor : 4 objectifs (croissance + emploi + inflation ~2 % + équilibre extérieur)",
+        "Déflation = plus dangereuse que l'inflation : spirale baisse prix → baisse production → hausse chômage"
+      ],
+      rac: {
+        situation: "Face à une récession, le gouvernement augmente les dépenses publiques et la BCE baisse ses taux directeurs. Quelles sont les logiques économiques de ces deux décisions ?",
+        regle: "La politique budgétaire expansive (Keynes) stimule la demande globale. La politique monétaire accommodante (BCE) réduit le coût du crédit pour relancer l'investissement. Ce sont deux outils de stabilisation conjoncturelle.",
+        application: "En récession, la demande privée est insuffisante. L'État la supplante par des dépenses publiques. La BCE stimule le crédit en abaissant ses taux, facilitant l'investissement des entreprises.",
+        conclusion: "Ces deux politiques sont complémentaires. Elles visent simultanément deux objectifs du carré magique : ↑ croissance et ↓ chômage. Attention cependant au risque inflationniste si la relance est trop forte."
+      },
+      pieges: [
+        "Politique budgétaire ≠ politique monétaire : l'État décide du budget / la BCE décide des taux (indépendance)",
+        "Un budget équilibré n'efface PAS la dette — il l'empêche seulement d'augmenter",
+        "Inflation à 2 % n'est PAS un problème pour la BCE : c'est son OBJECTIF (la déflation est bien plus redoutée)"
+      ]
+    }
   },
   {
     id: "eco-c3", title: "Éco C3", subtitle: "Les facteurs de production",
@@ -371,7 +618,28 @@ const CHAPTERS = [
         { title: "A. Les formes d'impartition", text: "L'impartition consiste à déléguer à d'autres une partie des activités que l'entreprise aurait pu réaliser elle-même. La sous-traitance confie une tâche précise à un prestataire (donneur d'ordre → sous-traitant) tout en conservant la responsabilité globale. L'externalisation transfère durablement une activité entière (non-cœur de métier) à un prestataire. La co-traitance est un accord entre entreprises pour répondre ensemble à un marché. La franchise, la concession, le joint-venture et le GIE sont d'autres formes de coopération inter-entreprises.", keyPoints: ["Sous-traitance : tâche précise, donneur d'ordre reste responsable", "Externalisation : transfert durable d'une activité complète (ex: paie, IT)", "Chaîne de valeur (Porter) : outil pour identifier où créer de la valeur"] }
       ]}
     ],
-    focus: { type: "auteur", title: "Michael Porter et la chaîne de valeur", subtitle: "L'Avantage concurrentiel, 1985", content: "Michael Porter (né en 1947) propose la chaîne de valeur comme outil d'analyse stratégique. Elle décompose les activités de l'entreprise en activités principales (logistique entrante, production, logistique sortante, commercialisation, services) et activités de soutien (infrastructure, GRH, technologie, approvisionnement). Identifier les activités créatrices de valeur permet de décider quelles activités internaliser (avantage compétitif) et lesquelles externaliser.", tags: ["Chaîne de valeur", "Avantage concurrentiel", "Impartition", "Cœur de métier"] }
+    focus: { type: "auteur", title: "Michael Porter et la chaîne de valeur", subtitle: "L'Avantage concurrentiel, 1985", content: "Michael Porter (né en 1947) propose la chaîne de valeur comme outil d'analyse stratégique. Elle décompose les activités de l'entreprise en activités principales (logistique entrante, production, logistique sortante, commercialisation, services) et activités de soutien (infrastructure, GRH, technologie, approvisionnement). Identifier les activités créatrices de valeur permet de décider quelles activités internaliser (avantage compétitif) et lesquelles externaliser.", tags: ["Chaîne de valeur", "Avantage concurrentiel", "Impartition", "Cœur de métier"] },
+    examFocus: {
+      pointsCles: [
+        "2 facteurs de production : travail (quantitatif + qualitatif) + capital (fixe : machines / circulant : matières premières)",
+        "Combinaison travaillistique (main-d'œuvre abondante) vs capitalistique (capital moins cher que travail)",
+        "Productivité du travail = production / quantité de travail (heures ou effectifs)",
+        "Gains de productivité : partagés entre consommateurs (↓ prix) + salariés (↑ salaires) + actionnaires (↑ dividendes)",
+        "Chaîne de valeur Porter : activités PRINCIPALES (logistique, production, commercial, SAV) + activités de SOUTIEN (GRH, IT, R&D)",
+        "Impartition : sous-traitance (tâche précise) ≠ externalisation (transfert DURABLE d'une activité entière)"
+      ],
+      rac: {
+        situation: "Une ESN décide de confier sa comptabilité et sa paie à un cabinet externe spécialisé. De quel type d'impartition s'agit-il ? Quels avantages et risques ?",
+        regle: "L'externalisation est le transfert DURABLE d'une activité entière à un prestataire. La chaîne de valeur (Porter, 1985) distingue activités principales (cœur de métier) et activités de soutien (support). Externaliser les activités de soutien permet de se concentrer sur le cœur de métier.",
+        application: "La comptabilité et la paie sont des activités de soutien pour une ESN dont le cœur de métier est informatique. L'externalisation est pertinente stratégiquement.",
+        conclusion: "Il s'agit d'une externalisation. Avantages : concentration sur le cœur métier IT, expertise comptable externe. Risques : dépendance au prestataire, perte de contrôle sur des données sensibles (paie = données personnelles RGPD)."
+      },
+      pieges: [
+        "Sous-traitance ≠ externalisation : la sous-traitance est PONCTUELLE, le donneur d'ordre reste responsable",
+        "Gains de productivité n'impliquent PAS automatiquement des hausses de salaires — c'est une décision de l'entreprise",
+        "Capital circulant ≠ capital financier : le circulant est CONSOMMÉ à la première utilisation (matières premières)"
+      ]
+    }
   },
   {
     id: "mgmt-c1", title: "Management C1", subtitle: "L'entreprise et ses parties prenantes",
@@ -407,7 +675,28 @@ const CHAPTERS = [
         { title: "A. Efficacité, efficience, pertinence et tableau de bord", text: "La mesure de la performance repose sur trois notions distinctes. L'efficacité (résultat atteint / objectif fixé) répond à la question : « Est-ce que j'atteins mon objectif ? ». L'efficience (résultat atteint / moyens utilisés) répond à : « Est-ce que je l'atteins en optimisant mes ressources ? ». La pertinence (moyens utilisés / objectifs fixés) répond à : « Les moyens que j'ai mobilisés étaient-ils adaptés à mes objectifs ? ».\n\nLe tableau de bord prospectif (BSC — Balanced Scorecard, Kaplan & Norton, 1992) intègre quatre perspectives : financière (rentabilité, chiffre d'affaires), client (satisfaction, fidélisation), processus internes (qualité, délais), et apprentissage/innovation (formation, R&D). Un indicateur de performance (KPI) est pertinent s'il est mesurable, actionnable et aligné sur la stratégie.", keyPoints: ["Efficacité = résultat / objectif → « Fait-on les bonnes choses ? »", "Efficience = résultat / moyens → « Fait-on les choses correctement ? »", "BSC (Kaplan & Norton) : 4 perspectives — financière, client, processus, apprentissage"] }
       ]}
     ],
-    focus: { type: "auteur", title: "R. Edward Freeman — Théorie des parties prenantes", subtitle: "Strategic Management: A Stakeholder Approach, 1984", content: "Freeman remet en cause la vision purement actionnariale de l'entreprise (théorie de Friedman). Pour lui, l'entreprise doit créer de la valeur pour l'ensemble de ses parties prenantes, pas seulement pour les actionnaires. Cette théorie est aujourd'hui au cœur de la gouvernance RSE et du mouvement 'stakeholder capitalism' (Forum de Davos, Business Roundtable 2019).", tags: ["Parties prenantes", "Stakeholder capitalism", "Gouvernance", "Vs Friedman"] }
+    focus: { type: "auteur", title: "R. Edward Freeman — Théorie des parties prenantes", subtitle: "Strategic Management: A Stakeholder Approach, 1984", content: "Freeman remet en cause la vision purement actionnariale de l'entreprise (théorie de Friedman). Pour lui, l'entreprise doit créer de la valeur pour l'ensemble de ses parties prenantes, pas seulement pour les actionnaires. Cette théorie est aujourd'hui au cœur de la gouvernance RSE et du mouvement 'stakeholder capitalism' (Forum de Davos, Business Roundtable 2019).", tags: ["Parties prenantes", "Stakeholder capitalism", "Gouvernance", "Vs Friedman"] },
+    examFocus: {
+      pointsCles: [
+        "Entrepreneur (crée, innove, risque) ≠ Manager (optimise, coordonne, délègue) — peuvent coexister",
+        "PP internes : actionnaires, salariés, dirigeants / PP externes : clients, fournisseurs, État, ONG",
+        "RSE pyramide Carroll (1991) : économique → légal → éthique → philanthropique",
+        "Efficacité = résultat/objectif (« fait-on les bonnes choses ? ») / Efficience = résultat/moyens (« comment ? »)",
+        "BSC Kaplan & Norton : 4 perspectives (financière / client / processus internes / apprentissage-innovation)",
+        "Loi PACTE 2019 : raison d'être + société à mission / CSRD 2024 : reporting ESG obligatoire"
+      ],
+      rac: {
+        situation: "La direction d'une ESN supprime le service formation pour réduire les coûts. Les salariés menacent de démissionner, un client majeur s'inquiète de la qualité future. Analysez en termes de parties prenantes.",
+        regle: "La théorie des parties prenantes (Freeman, 1984) stipule que l'entreprise doit créer de la valeur pour l'ensemble de ses PP, pas seulement pour les actionnaires. Le BSC intègre les perspectives apprentissage et client dans la mesure de la performance.",
+        application: "La suppression de la formation impacte négativement les salariés (PP interne) qui menacent de partir, et les clients (PP externe) qui anticipent une dégradation qualitative.",
+        conclusion: "La décision maximise le profit à court terme mais fragilise la performance à moyen terme (turnover, perte de compétences, risque client). Une approche RSE et BSC aurait conduit à préserver la formation comme investissement stratégique."
+      },
+      pieges: [
+        "Efficacité ≠ efficience : l'une mesure si on atteint l'objectif, l'autre avec quels moyens — deux notions distinctes",
+        "RSE ≠ philanthropie pure : la RSE peut être source d'avantage compétitif (attractivité, marchés publics, image)",
+        "Actionnaire ≠ dirigeant : conflit d'agence possible entre propriétaires et gestionnaires"
+      ]
+    }
   },
   {
     id: "mgmt-c2", title: "Management C2", subtitle: "La stratégie d'entreprise",
@@ -438,7 +727,28 @@ const CHAPTERS = [
         ], keyPoints: ["Développement durable : 3 piliers (économique, social, environnemental)", "4 types d'innovation OCDE : produit, procédé, commercialisation, organisation", "Schumpeter : l'innovation détruit les anciens marchés pour en créer de nouveaux"] }
       ]}
     ],
-    focus: { type: "auteur", title: "Joseph Schumpeter — La destruction créatrice", subtitle: "Capitalisme, socialisme et démocratie, 1942", content: "Schumpeter (1883-1950) est l'économiste de l'innovation. Il théorise que le capitalisme avance par 'destruction créatrice' : les innovations brisent les structures existantes et en créent de nouvelles. L'entrepreneur schumpétérien est l'acteur central du progrès économique. Cette théorie explique comment des entreprises comme Amazon ou Uber ont détruit des industries entières tout en en créant de nouvelles.", tags: ["Innovation", "Destruction créatrice", "Entrepreneur", "Capitalisme dynamique"] }
+    focus: { type: "auteur", title: "Joseph Schumpeter — La destruction créatrice", subtitle: "Capitalisme, socialisme et démocratie, 1942", content: "Schumpeter (1883-1950) est l'économiste de l'innovation. Il théorise que le capitalisme avance par 'destruction créatrice' : les innovations brisent les structures existantes et en créent de nouvelles. L'entrepreneur schumpétérien est l'acteur central du progrès économique. Cette théorie explique comment des entreprises comme Amazon ou Uber ont détruit des industries entières tout en en créant de nouvelles.", tags: ["Innovation", "Destruction créatrice", "Entrepreneur", "Capitalisme dynamique"] },
+    examFocus: {
+      pointsCles: [
+        "5 forces de Porter : rivalité entre concurrents + nouveaux entrants + substituts + pouvoir fournisseurs + pouvoir clients",
+        "Plus les 5 forces sont intenses → moins le secteur est ATTRACTIF",
+        "PESTEL : Politique / Économique / Socioculturel / Technologique / Écologique / Légal (macro-environnement)",
+        "Micro-environnement (5 forces, acteurs directs) ≠ Macro-environnement (PESTEL, facteurs incontrôlables)",
+        "Innovation OCDE : 4 types (produit / procédé / commercialisation / organisation)",
+        "Schumpeter : destruction créatrice = l'innovation détruit les anciens marchés pour en créer de nouveaux"
+      ],
+      rac: {
+        situation: "Une PME informatique veut lancer un service de cybersécurité managée pour les TPE. Analysez son micro-environnement concurrentiel avec le modèle de Porter.",
+        regle: "Le modèle des 5 forces de Porter (1979) évalue l'attractivité d'un secteur : intensité de la rivalité, menace de nouveaux entrants, menace de substitution, pouvoir des fournisseurs, pouvoir des clients.",
+        application: "Cybersécurité managée pour TPE : forte rivalité (nombreuses ESN) / nouveaux entrants facilités (cloud) / substituts (logiciels self-service) / clients TPE : sensibles au prix mais faible pouvoir de négo / fournisseurs (éditeurs) : fort pouvoir.",
+        conclusion: "Secteur modérément attractif. La PME doit se différencier sur la proximité et les prix adaptés aux TPE pour atténuer la pression concurrentielle et la menace des substituts."
+      },
+      pieges: [
+        "PESTEL ≠ 5 forces : PESTEL = macro (incontrôlable) / 5 forces = micro (acteurs directs avec qui on interagit)",
+        "Innovation de produit ≠ innovation de procédé : l'un améliore le bien livré, l'autre comment on le produit",
+        "Destruction créatrice (Schumpeter) = phénomène POSITIF à long terme (progrès), même si douloureux à court terme"
+      ]
+    }
   }
 ];
 
@@ -528,6 +838,21 @@ const DATA = [
   { id:78, term:"Desequilibre significatif",    cat:"droit-c4", color:"#f472b6", def:"Situation ou une entreprise impose a son partenaire des obligations creant un desequilibre excessif du fait d'une asymetrie de pouvoir economique." },
   { id:79, term:"Rupture brutale",              cat:"droit-c4", color:"#f472b6", def:"Concerne la cessation soudaine ou insuffisamment anticipee d'une relation commerciale stable et reguliere." },
   { id:80, term:"Concentration",               cat:"droit-c4", color:"#f472b6", def:"La concentration correspond a un rapprochement de societes qui conduit a la concentration du controle entre les mains d'une meme entite." },
+  // DROIT C7
+  { id:177, term:"Contrat de travail",           cat:"droit-c7", color:"#a3e635", def:"Convention par laquelle un salarie s'engage a travailler sous la direction d'un employeur moyennant remuneration. Trois criteres : prestation de travail, remuneration, lien de subordination." },
+  { id:178, term:"Lien de subordination",         cat:"droit-c7", color:"#a3e635", def:"Element cle du contrat de travail : l'employeur peut donner des ordres, controler le travail et sanctionner le salarie. Distingue le salarie du travailleur independant." },
+  { id:179, term:"CDI",                           cat:"droit-c7", color:"#a3e635", def:"Contrat a Duree Indeterminee : forme normale de la relation de travail. Pas de terme fixe, peut etre ecrit ou oral (temps plein). Rupture soumise a regles legales." },
+  { id:180, term:"CDD",                           cat:"droit-c7", color:"#a3e635", def:"Contrat a Duree Determinee : recours limite aux cas prevus par la loi (remplacement, accroissement temporaire, saisonnier). Toujours ecrit. Duree max 18 mois. Indemnite fin de contrat : 10 %." },
+  { id:181, term:"CTT (Interim)",                 cat:"droit-c7", color:"#a3e635", def:"Contrat de Travail Temporaire : implique 3 parties. L'ETT (Entreprise de Travail Temporaire) est l'employeur legal. L'entreprise utilisatrice dirige le travail. Memes motifs que le CDD." },
+  { id:182, term:"Periode d'essai",               cat:"droit-c7", color:"#a3e635", def:"Periode initiale pendant laquelle chaque partie peut rompre librement le contrat. Duree : 2 mois (ouvriers), 3 mois (AM/techniciens), 4 mois (cadres). Renouvelable une fois." },
+  { id:183, term:"SMIC",                          cat:"droit-c7", color:"#a3e635", def:"Salaire Minimum Interprofessionnel de Croissance : plancher legal du salaire. Revalorise chaque annee. Aucun salarie ne peut etre remunere en dessous." },
+  { id:184, term:"Clause de non-concurrence",     cat:"droit-c7", color:"#a3e635", def:"Clause interdisant au salarie d'exercer une activite concurrente apres le contrat. Valide si : limitee dans le temps, dans l'espace, et assortie d'une contrepartie financiere." },
+  { id:185, term:"Suspension du contrat",         cat:"droit-c7", color:"#a3e635", def:"Le contrat est temporairement inexecute sans etre rompu (arret maladie, accident du travail, conge maternite, greve). Le contrat reprend apres la cause de suspension." },
+  { id:186, term:"Demission",                     cat:"droit-c7", color:"#a3e635", def:"Rupture du contrat a l'initiative du salarie. Doit etre claire et non equivoque. Preavis obligatoire. Pas d'allocation chomage (ARE), sauf demission legitime." },
+  { id:187, term:"Licenciement pour motif personnel", cat:"droit-c7", color:"#a3e635", def:"Rupture a l'initiative de l'employeur fondee sur le comportement ou les aptitudes du salarie : faute simple, faute grave (pas de preavis ni indemnite), faute lourde (intention de nuire), ou insuffisance professionnelle." },
+  { id:188, term:"Licenciement pour motif economique", cat:"droit-c7", color:"#a3e635", def:"Rupture a l'initiative de l'employeur fondee sur des raisons economiques (difficultes financieres, mutations techno, reorganisation). Obligation de reclassement prealable." },
+  { id:189, term:"Rupture conventionnelle",       cat:"droit-c7", color:"#a3e635", def:"Mode de rupture amiable du CDI : accord entre employeur et salarie. Procedure : entretien → signature → retractation 15 jours → homologation DREETS. Salarie : indemnite + droit a l'ARE." },
+  { id:190, term:"Conseil de prud'hommes",        cat:"droit-c7", color:"#a3e635", def:"Juridiction paritaire competente pour les litiges individuels entre employeurs et salaries. Peut requalifier un CDD en CDI ou condamner un licenciement sans cause reelle et serieuse." },
   // DROIT C5
   { id:81, term:"Marque",                       cat:"droit-c5", color:"#fb923c", def:"Signe distinctif qui accompagne un produit ou service pour le distinguer de ceux proposes par la concurrence. Sa protection necessite un depot aupres de l'INPI." },
   { id:82, term:"Brevet",                       cat:"droit-c5", color:"#fb923c", def:"Le brevet est un acte officiel de propriete industrielle qui accorde un monopole d'exploitation au demandeur sur son invention pour une duree maximale de 20 ans." },
