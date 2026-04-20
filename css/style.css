@@ -378,7 +378,7 @@ header h1 { font-family: 'Outfit', sans-serif; font-size: 1.3rem; font-weight: 9
 .quiz-counter { font-size: 0.75rem; color: #475569; font-weight: 600; margin-bottom: 20px; letter-spacing: 0.05em; font-family: 'DM Sans', sans-serif; }
 .quiz-question { font-family: 'Outfit', sans-serif; font-size: clamp(1.3rem, 3vw, 1.7rem); font-weight: 800; color: #f1f5f9; margin-bottom: 24px; letter-spacing: -0.02em; line-height: 1.2; }
 .quiz-options { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; margin-bottom: 20px; }
-.quiz-option { padding: 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.03); color: #94a3b8; cursor: pointer; font-size: 0.8rem; line-height: 1.5; text-align: left; transition: all 0.2s; font-family: 'DM Sans', sans-serif; }
+.quiz-option { padding: 12px 14px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.03); color: #94a3b8; cursor: pointer; font-size: 0.76rem; line-height: 1.55; text-align: left; transition: all 0.2s; font-family: 'DM Sans', sans-serif; }
 .quiz-option:hover:not(.disabled) { background: rgba(255,255,255,0.08); border-color: rgba(255,255,255,0.15); color: #e2e8f0; }
 .quiz-option.correct { background: rgba(74,222,128,0.12); border-color: rgba(74,222,128,0.4); color: #bbf7d0; }
 .quiz-option.wrong { background: rgba(248,113,113,0.12); border-color: rgba(248,113,113,0.4); color: #fecaca; }
@@ -460,7 +460,10 @@ header h1 { font-family: 'Outfit', sans-serif; font-size: 1.3rem; font-weight: 9
 .fc-counter { font-family: 'Outfit', sans-serif; font-size: 0.9rem; font-weight: 800; color: #6366f1; }
 .fc-close { background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.08); color: #64748b; padding: 6px 14px; border-radius: 8px; cursor: pointer; font-size: 0.78rem; transition: all 0.2s; font-family: 'DM Sans', sans-serif; }
 .fc-close:hover { background: rgba(255,255,255,0.1); color: #e2e8f0; }
-.fc-hint { font-size: 0.7rem; color: #1e293b; margin-bottom: 20px; letter-spacing: 0.05em; font-weight: 500; }
+.fc-hint { font-size: 0.68rem; color: #1e293b; margin-bottom: 16px; letter-spacing: 0.03em; font-weight: 500; }
+.fc-hint kbd { display: inline-block; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.1); border-radius: 4px; padding: 1px 5px; font-size: 0.65rem; font-family: monospace; color: #475569; margin: 0 1px; }
+.fc-flip-hint { font-size: 0.65rem; color: #1e293b; margin-top: 16px; letter-spacing: 0.04em; }
+.fc-level-badge { font-size: 0.62rem; font-weight: 700; margin-top: 6px; letter-spacing: 0.08em; text-transform: uppercase; opacity: 0.8; }
 .fc-scene { perspective: 1000px; width: min(560px, 90vw); height: min(300px, 50vh); margin-bottom: 24px; cursor: pointer; }
 .fc-card { width: 100%; height: 100%; position: relative; transform-style: preserve-3d; transition: transform 0.5s cubic-bezier(0.4,0,0.2,1); }
 .fc-card.flipped { transform: rotateY(180deg); }
@@ -471,7 +474,6 @@ header h1 { font-family: 'Outfit', sans-serif; font-size: 1.3rem; font-weight: 9
 .fc-term { font-family: 'Outfit', sans-serif; font-size: clamp(1.4rem, 4vw, 2rem); font-weight: 900; line-height: 1.2; color: #f1f5f9; letter-spacing: -0.02em; }
 .fc-cat-badge { margin-top: 16px; font-size: 0.65rem; padding: 4px 12px; border-radius: 999px; font-weight: 700; opacity: 0.8; font-family: 'DM Sans', sans-serif; letter-spacing: 0.03em; }
 .fc-def { font-size: clamp(0.8rem, 2vw, 0.95rem); line-height: 1.75; color: #94a3b8; font-family: 'DM Sans', sans-serif; }
-.fc-flip-icon { position: absolute; bottom: 12px; right: 16px; font-size: 0.9rem; opacity: 0.12; }
 .fc-progress-wrap { margin-bottom: 20px; width: min(560px, 90vw); display: flex; flex-direction: column; align-items: center; gap: 8px; }
 .fc-progress-dots-row { display: flex; gap: 4px; flex-wrap: wrap; justify-content: center; }
 .fc-dot { width: 6px; height: 6px; border-radius: 50%; background: rgba(255,255,255,0.07); transition: background 0.3s; flex-shrink: 0; }
@@ -484,14 +486,42 @@ header h1 { font-family: 'Outfit', sans-serif; font-size: 1.3rem; font-weight: 9
 .fc-actions { display: flex; gap: 8px; flex-wrap: wrap; justify-content: center; max-width: 560px; width: 100%; }
 .fc-btn { flex: 1; min-width: 90px; padding: 12px 14px; border-radius: 11px; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.03); color: #64748b; font-size: 0.8rem; font-weight: 600; cursor: pointer; transition: all 0.2s; display: flex; align-items: center; justify-content: center; gap: 5px; font-family: 'DM Sans', sans-serif; }
 .fc-btn:hover { background: rgba(255,255,255,0.08); color: #cbd5e1; }
-.fc-btn-learned { border-color: rgba(74,222,128,0.2); color: #4ade80; }
-.fc-btn-learned:hover { background: rgba(74,222,128,0.1); }
-.fc-btn-learned.active { background: rgba(74,222,128,0.12); border-color: rgba(74,222,128,0.4); }
+.fc-btn-flip { border-color: rgba(99,102,241,0.25); color: #818cf8; }
+.fc-btn-flip:hover { background: rgba(99,102,241,0.1); color: #a5b4fc; }
 .fc-btn-next { border-color: rgba(99,102,241,0.3); background: linear-gradient(135deg, rgba(99,102,241,0.1), rgba(129,140,248,0.1)); color: #818cf8; font-weight: 700; }
 .fc-btn-next:hover { background: linear-gradient(135deg, rgba(99,102,241,0.2), rgba(129,140,248,0.2)); color: #a5b4fc; }
 .fc-filter-row { display: flex; gap: 6px; margin-bottom: 16px; flex-wrap: wrap; justify-content: center; }
 .fc-filter-chip { padding: 5px 14px; border-radius: 999px; font-size: 0.7rem; font-weight: 600; cursor: pointer; border: 1px solid rgba(255,255,255,0.07); background: rgba(255,255,255,0.03); color: #475569; transition: all 0.2s; font-family: 'DM Sans', sans-serif; letter-spacing: 0.02em; }
 .fc-filter-chip.active { background: rgba(99,102,241,0.15); border-color: rgba(99,102,241,0.4); color: #818cf8; }
+.fc-chapter-row { width: min(560px, 90vw); margin-bottom: 10px; }
+.fc-chapter-group { display: none; gap: 6px; flex-wrap: wrap; justify-content: center; padding: 8px 0; border-top: 1px solid rgba(255,255,255,0.04); }
+.fc-subchip { padding: 4px 11px; border-radius: 999px; font-size: 0.65rem; font-weight: 600; cursor: pointer; border: 1px solid rgba(255,255,255,0.08); background: rgba(255,255,255,0.02); color: #334155; transition: all 0.2s; font-family: 'DM Sans', sans-serif; letter-spacing: 0.02em; }
+.fc-subchip:hover { background: rgba(255,255,255,0.06); color: #64748b; }
+.fc-subchip.active { background: rgba(99,102,241,0.18); border-color: rgba(99,102,241,0.45); color: #a5b4fc; }
+
+/* ── FLASHCARD EVAL BUTTONS ─────────────────────────────── */
+.fc-eval-btns { display: none; gap: 10px; width: min(560px, 90vw); justify-content: center; }
+.fc-eval-btn { flex: 1; display: flex; flex-direction: column; align-items: center; gap: 4px; padding: 14px 10px; border-radius: 14px; border: 1px solid; cursor: pointer; transition: transform 0.18s, box-shadow 0.18s, background 0.18s; font-family: 'DM Sans', sans-serif; }
+.fc-eval-btn:hover { transform: translateY(-3px); }
+.fc-eval-btn kbd { display: inline-block; padding: 2px 7px; border-radius: 5px; font-size: 0.75rem; font-weight: 700; margin-bottom: 2px; }
+.fc-eval-label { font-size: 0.82rem; font-weight: 700; }
+.fc-eval-sub { font-size: 0.62rem; opacity: 0.6; }
+.fc-eval-again { background: rgba(248,113,113,0.08); border-color: rgba(248,113,113,0.3); color: #f87171; }
+.fc-eval-again:hover { background: rgba(248,113,113,0.16); box-shadow: 0 6px 20px rgba(248,113,113,0.15); }
+.fc-eval-again kbd { background: rgba(248,113,113,0.15); color: #f87171; border: 1px solid rgba(248,113,113,0.3); }
+.fc-eval-hard { background: rgba(251,191,36,0.07); border-color: rgba(251,191,36,0.3); color: #fbbf24; }
+.fc-eval-hard:hover { background: rgba(251,191,36,0.14); box-shadow: 0 6px 20px rgba(251,191,36,0.12); }
+.fc-eval-hard kbd { background: rgba(251,191,36,0.12); color: #fbbf24; border: 1px solid rgba(251,191,36,0.3); }
+.fc-eval-got { background: rgba(74,222,128,0.08); border-color: rgba(74,222,128,0.3); color: #4ade80; }
+.fc-eval-got:hover { background: rgba(74,222,128,0.15); box-shadow: 0 6px 20px rgba(74,222,128,0.15); }
+.fc-eval-got kbd { background: rgba(74,222,128,0.12); color: #4ade80; border: 1px solid rgba(74,222,128,0.3); }
+
+/* ── FLASHCARD COMPLETE ─────────────────────────────────── */
+.fc-complete { display: none; flex-direction: column; align-items: center; gap: 12px; text-align: center; padding: 20px; }
+.fc-complete-icon { font-size: 3rem; }
+.fc-complete-title { font-family: 'Outfit', sans-serif; font-size: 1.6rem; font-weight: 900; color: #f1f5f9; letter-spacing: -0.03em; }
+.fc-complete-sub { font-size: 0.85rem; color: #475569; }
+.fc-complete-btns { display: flex; gap: 10px; margin-top: 8px; }
 
 /* ── MISC ───────────────────────────────────────────────── */
 mark { background: rgba(167,139,250,0.35); color: inherit; border-radius: 2px; }

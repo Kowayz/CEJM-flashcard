@@ -390,7 +390,7 @@
 </div>
 
 <!-- FLASHCARD -->
-<div class="fc-overlay" id="fcOverlay">
+<div class="fc-overlay" id="fcOverlay" tabindex="-1">
   <div class="fc-header">
     <span class="fc-title">Mode Flashcard</span>
     <span class="fc-counter" id="fcCounter">1 / 176</span>
@@ -403,31 +403,79 @@
     <button class="fc-filter-chip" data-fc-filter="mgmt" onclick="setFcFilter('mgmt')" style="color:#f97316">Management</button>
     <button class="fc-filter-chip" data-fc-filter="todo" onclick="setFcFilter('todo')" style="color:#fbbf24">À apprendre</button>
   </div>
+  <div class="fc-chapter-row" id="fcChapterRow">
+    <div class="fc-chapter-group" id="fcChDroit">
+      <button class="fc-subchip" data-fc-filter="chapter:droit-c1" onclick="setFcFilter('chapter:droit-c1')">C1 · Sources</button>
+      <button class="fc-subchip" data-fc-filter="chapter:droit-c2" onclick="setFcFilter('chapter:droit-c2')">C2 · Contrats</button>
+      <button class="fc-subchip" data-fc-filter="chapter:droit-c3" onclick="setFcFilter('chapter:droit-c3')">C3 · Inexécution</button>
+      <button class="fc-subchip" data-fc-filter="chapter:droit-c4" onclick="setFcFilter('chapter:droit-c4')">C4 · Concurrence</button>
+      <button class="fc-subchip" data-fc-filter="chapter:droit-c5" onclick="setFcFilter('chapter:droit-c5')">C5 · Prop. intel.</button>
+      <button class="fc-subchip" data-fc-filter="chapter:droit-c6" onclick="setFcFilter('chapter:droit-c6')">C6 · Sociétés</button>
+      <button class="fc-subchip" data-fc-filter="chapter:droit-c7" onclick="setFcFilter('chapter:droit-c7')">C7 · Travail</button>
+    </div>
+    <div class="fc-chapter-group" id="fcChEco">
+      <button class="fc-subchip" data-fc-filter="chapter:eco-c1" onclick="setFcFilter('chapter:eco-c1')">C1 · Marché</button>
+      <button class="fc-subchip" data-fc-filter="chapter:eco-c2" onclick="setFcFilter('chapter:eco-c2')">C2 · État</button>
+      <button class="fc-subchip" data-fc-filter="chapter:eco-c3" onclick="setFcFilter('chapter:eco-c3')">C3 · Production</button>
+    </div>
+    <div class="fc-chapter-group" id="fcChMgmt">
+      <button class="fc-subchip" data-fc-filter="chapter:mgmt-c1" onclick="setFcFilter('chapter:mgmt-c1')">C1 · Parties prenantes</button>
+      <button class="fc-subchip" data-fc-filter="chapter:mgmt-c2" onclick="setFcFilter('chapter:mgmt-c2')">C2 · Stratégie</button>
+    </div>
+  </div>
   <div class="fc-progress-wrap" id="fcDots"></div>
-  <p class="fc-hint">Cliquer sur la carte pour retourner &nbsp;·&nbsp; Espace / Entrée</p>
+  <p class="fc-hint">Espace pour retourner &nbsp;·&nbsp; puis &nbsp;<kbd>←</kbd> Raté &nbsp;<kbd>↓</kbd> Difficile &nbsp;<kbd>→</kbd> Connu</p>
   <div class="fc-scene" onclick="fcFlip()">
     <div class="fc-card" id="fcCard">
       <div class="fc-face fc-front">
-        <div class="fc-face-label">Terme à définir</div>
+        <div class="fc-face-label">Essaie de te souvenir…</div>
         <div class="fc-term" id="fcTerm"></div>
         <div class="fc-cat-badge" id="fcCatBadge"></div>
-        <div class="fc-flip-icon">&#8635;</div>
+        <div class="fc-level-badge" id="fcLevelBadge"></div>
+        <div class="fc-flip-hint">Espace pour révéler la définition ↩</div>
       </div>
       <div class="fc-face fc-back">
         <div class="fc-face-label">Définition</div>
         <div class="fc-def" id="fcDef"></div>
-        <div class="fc-flip-icon">&#8635;</div>
       </div>
     </div>
   </div>
-  <div class="fc-actions">
+
+  <!-- Actions avant flip -->
+  <div class="fc-actions" id="fcDefaultActions">
     <button class="fc-btn" onclick="fcGo(-1)">&#8592; Précédent</button>
-    <button class="fc-btn fc-btn-learned" id="fcLearnedBtn" onclick="fcToggleLearned()">Appris</button>
-    <button class="fc-btn" onclick="fcGoRandom()">
-      <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"><polyline points="16 3 21 3 21 8"/><line x1="4" y1="20" x2="21" y2="3"/><polyline points="21 16 21 21 16 21"/><line x1="15" y1="15" x2="21" y2="21"/></svg>
-      Aléatoire
+    <button class="fc-btn fc-btn-flip" onclick="fcFlip()">↩ Retourner</button>
+    <button class="fc-btn fc-btn-next" onclick="fcGo(1)">Passer &#8594;</button>
+  </div>
+
+  <!-- Boutons d'évaluation après flip -->
+  <div class="fc-eval-btns" id="fcEvalBtns">
+    <button class="fc-eval-btn fc-eval-again" onclick="fcRate('again')">
+      <kbd>←</kbd>
+      <span class="fc-eval-label">Raté</span>
+      <span class="fc-eval-sub">Revient dans 2 cartes</span>
     </button>
-    <button class="fc-btn fc-btn-next" onclick="fcGo(1)">Suivant &#8594;</button>
+    <button class="fc-eval-btn fc-eval-hard" onclick="fcRate('hard')">
+      <kbd>↓</kbd>
+      <span class="fc-eval-label">Difficile</span>
+      <span class="fc-eval-sub">Revient en fin de session</span>
+    </button>
+    <button class="fc-eval-btn fc-eval-got" onclick="fcRate('got')">
+      <kbd>→</kbd>
+      <span class="fc-eval-label">Connu ✓</span>
+      <span class="fc-eval-sub">Carte écartée</span>
+    </button>
+  </div>
+
+  <!-- Session terminée -->
+  <div class="fc-complete" id="fcComplete">
+    <div class="fc-complete-icon">🎉</div>
+    <div class="fc-complete-title">Session terminée !</div>
+    <div class="fc-complete-sub" id="fcCompleteSub"></div>
+    <div class="fc-complete-btns">
+      <button class="btn-primary" onclick="fcRestart()">Recommencer</button>
+      <button class="btn-secondary" onclick="closeFlashcard()">Fermer</button>
+    </div>
   </div>
 </div>
 

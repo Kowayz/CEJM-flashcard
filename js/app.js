@@ -312,14 +312,6 @@ document.addEventListener('keydown', e => {
     if (e.key === 'Enter') toggleLearnedModal();
   }
   if (document.getElementById('quizOverlay').classList.contains('open') && e.key === 'Escape') closeQuiz();
-  if (document.getElementById('fcOverlay').classList.contains('open')) {
-    if (e.key === 'Escape') closeFlashcard();
-    if (e.key === ' ' || e.key === 'Enter') { e.preventDefault(); fcFlip(); }
-    if (e.key === 'ArrowRight') fcGo(1);
-    if (e.key === 'ArrowLeft') fcGo(-1);
-    if (e.key === 'r' || e.key === 'R') fcGoRandom();
-    if (e.key === 'a' || e.key === 'A') fcToggleLearned();
-  }
 });
 
 // ── INIT ────────────────────────────────────────────────────

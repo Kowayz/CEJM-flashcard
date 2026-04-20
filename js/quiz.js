@@ -131,7 +131,7 @@ function renderQuizQuestion() {
   options.forEach(opt => {
     const btn = document.createElement('button');
     btn.className = 'quiz-option';
-    btn.textContent = opt.def.length > 120 ? opt.def.slice(0, 120) + '...' : opt.def;
+    btn.textContent = opt.def;
     btn.addEventListener('click', () => {
       container.querySelectorAll('.quiz-option').forEach(b => b.classList.add('disabled'));
       const correct = opt.id === item.id;
@@ -139,7 +139,7 @@ function renderQuizQuestion() {
       else {
         btn.classList.add('wrong');
         container.querySelectorAll('.quiz-option').forEach(b => {
-          if (b.textContent === (item.def.length > 120 ? item.def.slice(0, 120) + '...' : item.def)) b.classList.add('correct');
+          if (b.textContent === item.def) b.classList.add('correct');
         });
       }
       handleAnswer(correct, item.id);
