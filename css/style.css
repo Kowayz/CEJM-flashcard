@@ -563,9 +563,34 @@ mark { background: rgba(167,139,250,0.35); color: inherit; border-radius: 2px; }
   .quiz-box { padding: 24px 20px; }
   .quiz-options { grid-template-columns: 1fr; gap: 8px; }
   .modal { padding: 24px 20px; border-radius: 18px; }
-  .fc-scene { height: min(280px, 50vh); width: 100%; }
-  .fc-face { padding: 20px; }
-  .fc-btn { min-width: 0; font-size: 0.72rem; padding: 10px 6px; }
+  /* ── FLASHCARD MOBILE ── */
+  .fc-overlay { padding-top: 56px; padding-bottom: 16px; justify-content: flex-start; overflow-y: auto; gap: 0; }
+  .fc-header { padding: 10px 16px; }
+  .fc-title { display: none; }
+  .fc-counter { font-size: 0.82rem; }
+  .fc-close { padding: 5px 12px; font-size: 0.72rem; }
+  .fc-filter-row { display: flex; flex-wrap: nowrap; overflow-x: auto; justify-content: flex-start; gap: 6px; padding: 8px 16px; margin-bottom: 0; width: 100%; box-sizing: border-box; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .fc-filter-row::-webkit-scrollbar { display: none; }
+  .fc-chapter-row { width: 100%; margin-bottom: 0; }
+  .fc-chapter-group { flex-wrap: nowrap; overflow-x: auto; justify-content: flex-start; padding: 6px 16px; scrollbar-width: none; -webkit-overflow-scrolling: touch; }
+  .fc-chapter-group::-webkit-scrollbar { display: none; }
+  .fc-subchip { white-space: nowrap; flex-shrink: 0; }
+  .fc-progress-wrap { width: 100%; padding: 0 16px; box-sizing: border-box; margin: 10px 0 6px; }
+  .fc-hint { display: none; }
+  .fc-scene { width: calc(100% - 32px); height: 42vh; min-height: 200px; margin: 10px auto 12px; cursor: pointer; }
+  .fc-face { padding: 20px 18px; }
+  .fc-term { font-size: clamp(1.2rem, 6vw, 1.6rem); }
+  .fc-def { font-size: 0.82rem; line-height: 1.65; }
+  .fc-flip-hint { font-size: 0.6rem; }
+  .fc-actions { padding: 0 16px; gap: 8px; }
+  .fc-btn { min-width: 0; font-size: 0.78rem; padding: 14px 8px; border-radius: 14px; flex: 1; }
+  .fc-eval-btns { flex-direction: row; padding: 0 12px; gap: 8px; width: 100%; box-sizing: border-box; }
+  .fc-eval-btn { padding: 16px 6px; border-radius: 16px; min-height: 80px; }
+  .fc-eval-btn kbd { font-size: 0.68rem; padding: 1px 5px; }
+  .fc-eval-label { font-size: 0.76rem; }
+  .fc-eval-sub { font-size: 0.57rem; }
+  .fc-complete { padding: 24px 20px; }
+  .fc-complete-title { font-size: 1.3rem; }
   .chapter-header { flex-wrap: wrap; }
   .chapter-header-progress { margin-left: 0; }
   .mode-tab { font-size: 0.72rem; padding: 8px; }
